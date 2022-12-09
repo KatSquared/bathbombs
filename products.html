@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Bathbombs - Boombastic Bathbombs</title>
+    <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=DM+Serif+Text:ital@0;1&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/d7195f3535.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="src/style.css">
+  </head>
+
+<body>
+
+<div class="page-background"></div>
+
+<!---------- Shorthand ----------->   
+
+<section class="shorthand">
+  <div class="logo">
+    <a href="index.html"><p class="logo-letters">:BB:</p></a>
+    <a href="index.html"><p class="logo-desc">BOOMBASTIC<br>BATHBOMBS</p></a>
+     
+  </div>
+  
+  <div class="shorthand-offer">
+      <a href="tel:+48504412332">OUR SPECIAL LIMITED OFFER STARTS NOW.<br>FREE SHIPPING, 
+          FREE WRAPPING, ALL 50% OFF.
+      </a>
+  </div>
+  <div class="shorthand-menu">
+      <div class="shorthand-menu__label">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <i class="fa-solid fa-user"></i>
+          <a href=basket.html class="cart-icon-and-amount">
+            <i class="fa-solid fa-basket-shopping"></i>
+            <p id="cartAmount">0</p>
+          </a>
+          <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+      </div>
+      
+      <div class="menu-links" id="menuLinks"> 
+          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+          <ul>
+              <li><a href="#landing">STRONA GŁÓWNA</a></li>
+              <li><a href="portfolio.html">PROJEKTY</a></li>
+              <li><a href="#kroki">NASZA OFERTA</a></li>
+              <li><a href="#about">O PRACOWNI</a></li>
+              <li><a href="#testimonials">REFERENCJE</a></li>
+              <li><a href="#kontakt">KONTAKT</a></li>
+          </ul>
+
+          <div class="menu-contact">
+              <a href="tel:+48504412332">
+                  +48 504 412 332
+              <a href="tel:91 834 56 78">
+                  91 834 56 78
+              </a>
+              <a href="mailto:wioletta.kmita@gmail.com">
+                  wioletta.kmita@gmail.com
+              </a>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+<section class="sections products-page-sections">
+  <div class="sections-links hidden">
+    <div class="section">
+      <a href="products.html">SPECIAL OFFER</a>
+    </div>
+    <div class="section">
+      <a href="products.html">COLLECTIONS</a>
+    </div>
+    <div class="section">
+      <a href="products.html">BATHBOMBS</a>
+    </div>
+    <div class="section">
+      <a href="index.html">SOAPS & ACCESORIES</a>
+    </div>
+    <div class="section">
+      <a href="products.html">GIFTS</a>
+    </div>
+  </div>
+</section>
+
+<!---------- MAIN ----------->
+
+<products-main>
+  <div class="products-sidebar">
+    <div class="breadcrumbs">
+      <p>Home</p><i class="fa-solid fa-angle-right"></i><p>Bathbombs</p>
+    </div>
+    <div class="products-sidebar-offer">
+      <h2>SPECIAL OFFER</h2>
+        <div class="products-sidebar-offer-image">
+        <i class="fa-solid fa-chevron-left"></i>
+        <img src="/src/img/PLACEHOLDER-REMOVE-LATER -6.png" alt="bathbombs sidebar image">
+        <i class="fa-solid fa-chevron-right"></i>
+    </div>
+    </div>
+    
+    <div class="products-sidebar-label">
+      <h2>:Bathbombs:</h2>
+    </div>
+  </div>
+
+  <div class="filters-and-items">
+    <div class="filters-container">
+      <div class="category-filters-container">
+        <div class="category-filter" id="category">
+          <p>Shape</p><i class="fa-solid fa-angle-down"></i>
+        </div>
+        <div class="category-filter" id="smell">
+          <p>Smell</p><i class="fa-solid fa-angle-down"></i>
+        </div>
+      </div>
+      <div class="sort-by-filter" id="sort-by">
+        <p>Sort by</p><i class="fa-solid fa-angle-down"></i>
+      </div>
+    </div>
+
+    <div class="products-grid" id="shop">
+      
+    </div>
+  </div>
+  
+</products-main>
+  <!------ Contact Footer ------>
+
+
+    <section class="contact-footer" id="kontakt">
+      <div class="contact-footer-col contact-footer-menu">
+          <h5>MENU</h5>
+          <ul class="contact-menu">
+              <li><a href="#landing">Strona główna</a></li>
+              <li><a href="portfolio.html">Projekty</a></li>
+              <li><a href="#kroki">Nasza oferta</a></li>
+              <li><a href="#about">O pracowni</a></li>
+              <li><a href="#testimonials">Referencje</a></li>
+          </ul>
+      </div>
+
+      <div class="contact-footer-col">
+          <h5>Pracownia Projektowa</h5>
+          <ul>
+              <li><i class="fa fa-home"></i><span>Adres:</span>
+                  <br>ul. Szczecińska 59<br>73-110 Stargard<br>II Piętro</li>
+              <li><i class="fa-solid fa-business-time"></i><span>Godziny pracy:</span>
+                  <br><span>PN-PT: </span>8:00 - 16:00</li>
+          </ul>
+      </div>
+
+      <div class="contact-footer-col dojazd">
+          <h5>Dojazd</h5>
+          <a href="https://goo.gl/maps/rrpUsVMW7rFqGvtt8" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+          </a> 
+      </div>
+
+      <div class="contact-footer-col">
+          <h5>Dane kontaktowe</h5>
+          <ul>
+              <li><a href="tel:+48504412332">
+                  <i class="fa-solid fa-mobile"></i>+48 504 412 332
+              </li></a>
+              <li><a href="tel:91 834 56 78">
+                  <i class="fa fa-phone"></i>91 834 56 78
+              </li></a>
+              <li><a href="mailto:wioletta.kmita@gmail.com">
+                  <i class="fa-solid fa-envelope"></i> wioletta.kmita@gmail.com
+              </a></li>
+              <li><span>NIP:</span> 494 495 565 77</li>
+          </ul>
+      </div>
+
+      
+    </section>
+
+    <div class="footer-credit">
+      <p>Wykonanie: <span style="text-decoration: underline;">Katarzyna Kmita</span></p>
+    </div>
+
+</main>
+
+<!----JavaScript for displaying products on page---->
+<script src="/src/product-data.js"></script>
+<script src="/src/products.js"></script>
+
+<!----JavaScript for toggle menu---->
+<script src="/src/menu.js"></script> 
+
+
+</body>
+</html>
