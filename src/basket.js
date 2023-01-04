@@ -10,8 +10,12 @@ let discount = 15;
 
 
 let calculation = () => {
-    let cartIcon = document.getElementById("cartAmount");
-    cartIcon.innerHTML = basket.map((x) => x.item).reduce((x, y) => x + y, 0);
+    let cartIcons = document.querySelectorAll("#cartAmount");
+    cartIcons.forEach(icon => {
+        icon.innerHTML = basket
+            .map((x) => x.item)
+            .reduce((x, y) => x + y, 0);
+    })
   };
   
 calculation();
@@ -167,15 +171,18 @@ let totalAmount = () => {
                     </div>
 
                     <div class="checkout">
-                        <a href="basket.html">
-                            <button class="cta">
-                                <i class="fa-solid fa-basket-shopping"></i>
-                                PROCEED TO CHECKOUT
-                            </button>
-                        </a>
+                        <button class="cta" onclick="purchase(), clearCart()">
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            PROCEED TO CHECKOUT
+                        </button>
                     </div>
             `
     } else return;
 };
 
 totalAmount();
+
+
+function purchase() {
+    alert("Thank you for your purchase! Stock had been reduced.");
+  }

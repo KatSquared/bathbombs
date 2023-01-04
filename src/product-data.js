@@ -7,7 +7,12 @@ let shopItemsData = [
         weight: 20,
         price: 5,
         category: 'BATHBOMBS',
-        stock: 20
+        stock: 99,
+        popularity: 4,
+        tags: {
+            shape: 'star',
+            smell: 'fruity'
+        }
     }, 
     {
         id: 'jajsfjsdgjkn',
@@ -17,8 +22,12 @@ let shopItemsData = [
         weight: 20,
         price: 5,
         category: 'BATHBOMBS',
-        stock: 15
-  
+        stock: 15,
+        popularity: 1,
+        tags: {
+            shape: 'sphere',
+            smell: 'floral'
+        }
     }, 
     {
         id: 'dghshktrjnjh',
@@ -28,7 +37,12 @@ let shopItemsData = [
         weight: 30,
         price: 7,
         category: 'BATHBOMBS',
-        stock: 8
+        stock: 99,
+        popularity: 12,
+        tags: {
+            shape: 'cupcake',
+            smell: 'fresh'
+        }
     }, 
     {
         id: 'ndjgkrjnhtnhr',
@@ -38,7 +52,12 @@ let shopItemsData = [
         weight: 25,
         price: 10,
         category: 'BATHBOMBS',
-        stock: 3
+        stock: 3,
+        popularity: 5,
+        tags: {
+            shape: 'heart',
+            smell: 'warm'
+        }
     }, 
     {
         id: 'fhdrjtdjyjty',
@@ -48,7 +67,12 @@ let shopItemsData = [
         weight: 15,
         price: 8,
         category: 'BATHBOMBS',
-        stock: 0
+        stock: 0,
+        popularity: 9,
+        tags: {
+            shape: 'heart',
+            smell: 'fruity'
+        }
     }, 
     {
       id: 'husr6dridit',
@@ -58,7 +82,12 @@ let shopItemsData = [
       weight: 25,
       price: 10,
       category: 'BATHBOMBS',
-      stock: 10
+      stock: 10,
+      popularity: 6,
+      tags: {
+        shape: 'cupcake',
+        smell: 'fresh'
+        }
     }, 
     {
       id: 'ytifkyutddkt',
@@ -68,7 +97,12 @@ let shopItemsData = [
       weight: 5,
       price: 12,
       category: 'BATHBOMBS',
-      stock: 22
+      stock: 99,
+      popularity: 2,
+      tags: {
+        shape: 'star',
+        smell: 'floral'
+        }
     },
     {
         id: 'eigsrejihjrth',
@@ -79,5 +113,10 @@ let shopItemsData = [
         price: 8,
         category: 'BATHBOMBS',
         stock: 30,
+        popularity: 3,
+        tags: {
+            shape: 'sphere',
+            smell: 'warm'
+        }
     }]
   

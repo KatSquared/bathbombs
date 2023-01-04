@@ -74,118 +74,227 @@
       <a href="products.html">SPECIAL OFFER</a>
     </div>
     <div class="section">
-      <a href="products.html">COLLECTIONS</a>
-    </div>
-    <div class="section">
       <a href="products.html">BATHBOMBS</a>
     </div>
     <div class="section">
       <a href="index.html">SOAPS & ACCESORIES</a>
-    </div>
-    <div class="section">
-      <a href="products.html">GIFTS</a>
     </div>
   </div>
 </section>
 
 <!---------- MAIN ----------->
 
-<products-main>
-  <div class="products-sidebar">
-    <div class="breadcrumbs">
-      <p>Home</p><i class="fa-solid fa-angle-right"></i><p>Bathbombs</p>
-    </div>
-    <div class="products-sidebar-offer">
-      <h2>SPECIAL OFFER</h2>
-        <div class="products-sidebar-offer-image">
-        <i class="fa-solid fa-chevron-left"></i>
-        <img src="/src/img/PLACEHOLDER-REMOVE-LATER -6.png" alt="bathbombs sidebar image">
-        <i class="fa-solid fa-chevron-right"></i>
-    </div>
-    </div>
-    
-    <div class="products-sidebar-label">
-      <h2>:Bathbombs:</h2>
-    </div>
+
+<section class="products-sidebar">
+  <div class="breadcrumbs">
+    <p>Home</p><i class="fa-solid fa-angle-right"></i><p>Bathbombs</p>
   </div>
+  <div class="products-sidebar-offer">
+    <h2>SPECIAL OFFER</h2>
+    <div class="special-offer-container">
+      <button class="carousel-button button-left">
+        <i class="fa-solid fa-chevron-left"></i>
+      </button>
+      <div class="special-offer-carousel carousel">
+        <div class="special-offer-carousel-track carousel-track">
 
-  <div class="filters-and-items">
-    <div class="filters-container">
-      <div class="category-filters-container">
-        <div class="category-filter" id="category">
-          <p>Shape</p><i class="fa-solid fa-angle-down"></i>
-        </div>
-        <div class="category-filter" id="smell">
-          <p>Smell</p><i class="fa-solid fa-angle-down"></i>
+          <!--COPY OF LAST SLIDE-->
+          <div class="special-item">
+            <div class="discount-label">
+              <p>-50%</p>
+            </div>
+            <img src="/src/img/PLACEHOLDER-REMOVE-LATER -3.png" alt="bathbombs sidebar image">    
+          </div>
+
+          <!--normal slides-->
+          <div class="special-item">
+            <div class="discount-label">
+              <p>-40%</p>
+            </div>
+            <img src="/src/img/PLACEHOLDER-REMOVE-LATER -6.png" alt="bathbombs sidebar image">        
+          </div>
+    
+          <div class="special-item">
+            <div class="discount-label">
+              <p>-30%</p>
+            </div>
+            <img src="/src/img/PLACEHOLDER-REMOVE-LATER -7.png" alt="bathbombs sidebar image">         
+          </div>
+    
+          <div class="special-item">
+            <div class="discount-label">
+              <p>-50%</p>
+            </div>
+            <img src="/src/img/PLACEHOLDER-REMOVE-LATER -3.png" alt="bathbombs sidebar image">        
+          </div>
+
+          <!--COPY OF FIRST SLIDE-->
+          <div class="special-item">
+            <div class="discount-label">
+              <p>-40%</p>
+            </div>
+            <img src="/src/img/PLACEHOLDER-REMOVE-LATER -6.png" alt="bathbombs sidebar image">        
+          </div>
         </div>
       </div>
-      <div class="sort-by-filter" id="sort-by">
-        <p>Sort by</p><i class="fa-solid fa-angle-down"></i>
-      </div>
-    </div>
 
-    <div class="products-grid" id="shop">
-      
+      <button class="carousel-button button-right">
+        <i class="fa-solid fa-chevron-right"></i>
+      </button>
     </div>
   </div>
   
-</products-main>
+  <div class="products-sidebar-label">
+    <h2>:Bathbombs:</h2>
+  </div>
+</section>
+
+<section class="filters">
+  <div class="filters-container">
+    <div class="category-filters-container">
+      <div class="category-dropdown" id="dropdown">
+        <div class="flex dropdown-btn" id="dropdown-btn">
+          <p>Shape</p>
+          <i class="fa-solid fa-angle-down" id="caret"></i>
+        </div>
+        <div class="dropdown-content" id="dropdown-content">
+          <div class="flex">
+            <i class="fa-regular fa-square category-filter" id="sphere" data-category="shape"></i>
+            <p class="category-filter" id="sphere">Sphere</p>
+          </div>
+          <div class="flex">
+            <i class="fa-regular fa-square category-filter" id="star" data-category="shape"></i>
+            <p class="category-filter" id="star">Star</p>
+          </div>
+          <div class="flex">
+            <i class="fa-regular fa-square category-filter" id="heart" data-category="shape"></i>
+            <p class="category-filter" id="heart">Heart</p>
+          </div>
+          <div class="flex">
+            <i class="fa-regular fa-square category-filter" id="cupcake" data-category="shape"></i>
+            <p class="category-filter" id="cupcake">Cupcake</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="category-dropdown" id="dropdown">
+        <div class="flex dropdown-btn" id="dropdown-btn">
+          <p>Smell</p>
+          <i class="fa-solid fa-angle-down" id="caret"></i>
+        </div>
+        <div class="dropdown-content" id="dropdown-content">
+          <div class="flex">
+            <i class="fa-regular fa-square category-filter" id="fruity" data-category="smell"></i>
+            <p class="category-filter" id="fruity">Fruity</p>
+          </div>
+          <div class="flex" id="floral">
+            <i class="fa-regular fa-square category-filter" id="floral" data-category="smell"></i>
+            <p class="category-filter" id="floral">Floral</p>
+          </div>
+          <div class="flex"  id="warm">
+            <i class="fa-regular fa-square category-filter" id="warm" data-category="smell"></i>
+            <p class="category-filter" id="warm">Warm</p>
+          </div>
+          <div class="flex" id="fresh">
+            <i class="fa-regular fa-square category-filter" id="fresh" data-category="smell"></i>
+            <p class="category-filter" id="fresh">Fresh</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="sort-by-filter" id="dropdown">
+      <div class="flex dropdown-btn" id="dropdown-btn">
+        <p>Sort by</p>
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+      <div class="dropdown-content" id="dropdown-content">
+        <div class="flex selected-option">
+          <i class="fa-solid fa-wand-magic-sparkles sorting-options" id="relevancy"></i>
+          <p class="sorting-options" id="relevancy">Relevancy</p>
+        </div>
+        <div class="flex">
+          <i class="fa-regular fa-face-grin-stars sorting-options" id="popularity"></i>
+          <p class="sorting-options" id="popularity">Popularity</p>
+        </div>
+        <div class="flex">
+          <i class="fa-solid fa-arrow-up sorting-options" id="price-up"></i>
+          <p class="sorting-options" id="price-up">Price Up</p>
+        </div>
+        <div class="flex">
+          <i class="fa-solid fa-arrow-down sorting-options" id="price-down"></i>
+          <p class="sorting-options" id="price-down">Price Down</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section class="items-container">
+  <div class="products-grid" id="shop"></div>
+</section>
+
   <!------ Contact Footer ------>
 
 
-    <section class="contact-footer" id="kontakt">
-      <div class="contact-footer-col contact-footer-menu">
-          <h5>MENU</h5>
-          <ul class="contact-menu">
-              <li><a href="#landing">Strona główna</a></li>
-              <li><a href="portfolio.html">Projekty</a></li>
-              <li><a href="#kroki">Nasza oferta</a></li>
-              <li><a href="#about">O pracowni</a></li>
-              <li><a href="#testimonials">Referencje</a></li>
-          </ul>
-      </div>
-
-      <div class="contact-footer-col">
-          <h5>Pracownia Projektowa</h5>
-          <ul>
-              <li><i class="fa fa-home"></i><span>Adres:</span>
-                  <br>ul. Szczecińska 59<br>73-110 Stargard<br>II Piętro</li>
-              <li><i class="fa-solid fa-business-time"></i><span>Godziny pracy:</span>
-                  <br><span>PN-PT: </span>8:00 - 16:00</li>
-          </ul>
-      </div>
-
-      <div class="contact-footer-col dojazd">
-          <h5>Dojazd</h5>
-          <a href="https://goo.gl/maps/rrpUsVMW7rFqGvtt8" target="_blank">
-              <i class="fa-solid fa-location-dot"></i>
-          </a> 
-      </div>
-
-      <div class="contact-footer-col">
-          <h5>Dane kontaktowe</h5>
-          <ul>
-              <li><a href="tel:+48504412332">
-                  <i class="fa-solid fa-mobile"></i>+48 504 412 332
-              </li></a>
-              <li><a href="tel:91 834 56 78">
-                  <i class="fa fa-phone"></i>91 834 56 78
-              </li></a>
-              <li><a href="mailto:wioletta.kmita@gmail.com">
-                  <i class="fa-solid fa-envelope"></i> wioletta.kmita@gmail.com
-              </a></li>
-              <li><span>NIP:</span> 494 495 565 77</li>
-          </ul>
-      </div>
-
-      
-    </section>
-
-    <div class="footer-credit">
-      <p>Wykonanie: <span style="text-decoration: underline;">Katarzyna Kmita</span></p>
+  <section class="contact-footer" id="kontakt">
+    <div class="wave">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+      </svg>
+    </div>
+    <div class="contact-footer-col contact-footer-menu">
+        <h5>MENU</h5>
+        <ul class="contact-menu">
+            <li><a href="#landing">Strona główna</a></li>
+            <li><a href="portfolio.html">Projekty</a></li>
+            <li><a href="#kroki">Nasza oferta</a></li>
+            <li><a href="#about">O pracowni</a></li>
+            <li><a href="#testimonials">Referencje</a></li>
+        </ul>
     </div>
 
-</main>
+    <div class="contact-footer-col">
+        <h5>Pracownia Projektowa</h5>
+        <ul>
+            <li><i class="fa fa-home"></i><span>Adres:</span>
+                <br>ul. Szczecińska 59<br>73-110 Stargard<br>II Piętro</li>
+            <li><i class="fa-solid fa-business-time"></i><span>Godziny pracy:</span>
+                <br><span>PN-PT: </span>8:00 - 16:00</li>
+        </ul>
+    </div>
+
+    <div class="contact-footer-col dojazd">
+        <h5>Dojazd</h5>
+        <a href="https://goo.gl/maps/rrpUsVMW7rFqGvtt8" target="_blank">
+            <i class="fa-solid fa-location-dot"></i>
+        </a> 
+    </div>
+
+    <div class="contact-footer-col">
+        <h5>Dane kontaktowe</h5>
+        <ul>
+            <li><a href="tel:+48504412332">
+                <i class="fa-solid fa-mobile"></i>+48 504 412 332
+            </li></a>
+            <li><a href="tel:91 834 56 78">
+                <i class="fa fa-phone"></i>91 834 56 78
+            </li></a>
+            <li><a href="mailto:wioletta.kmita@gmail.com">
+                <i class="fa-solid fa-envelope"></i> wioletta.kmita@gmail.com
+            </a></li>
+            <li><span>NIP:</span> 494 495 565 77</li>
+        </ul>
+    </div>
+
+    
+  </section>
+
+  <div class="footer-credit">
+    <p>Wykonanie: <span style="text-decoration: underline;">Katarzyna Kmita</span></p>
+  </div>
 
 <!----JavaScript for displaying products on page---->
 <script src="/src/product-data.js"></script>
@@ -194,6 +303,7 @@
 <!----JavaScript for toggle menu---->
 <script src="/src/menu.js"></script> 
 
+<script src="/src/carousel.js"></script>
 
 </body>
 </html>

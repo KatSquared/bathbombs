@@ -73,16 +73,10 @@
       <a href="products.html">SPECIAL OFFER</a>
     </div>
     <div class="section">
-      <a href="products.html">COLLECTIONS</a>
-    </div>
-    <div class="section">
       <a href="products.html">BATHBOMBS</a>
     </div>
     <div class="section">
       <a href="index.html">SOAPS & ACCESORIES</a>
-    </div>
-    <div class="section">
-      <a href="products.html">GIFTS</a>
     </div>
   </div>
 </section>
@@ -100,16 +94,17 @@
     <div class="product-container">
         <div class="product-images">
           <div class="other-images">
-            <img src="./src/img/blue-water.png" alt="">
-            <img src="./src/img/blue-bath.jpg" alt="">
-            <img src="./src/img/bag.png" alt="">
+            <!-- <img src="./src/img/PLACEHOLDER-REMOVE-LATER -1.png" onclick="changeImage(this)"> -->
+            <img src="./src/img/blue-water.png" onclick="changeImage(this)">
+            <img src="./src/img/blue-bath.jpg" onclick="changeImage(this)">
+            <img src="./src/img/bag.png" onclick="changeImage(this)">
           </div>
           <div class="current-image">
-            <img src="./src/img/PLACEHOLDER-REMOVE-LATER -1.png" alt="">
+            <img src="./src/img/PLACEHOLDER-REMOVE-LATER -1.png" id="currentImage">
           </div>
         </div>
         <div class="product-info">
-          <div class="desc-main">
+          <div>
             <h2>:BLUEBERRY DREAM:</h2>
             <h3>BATHBOMB</h3>
             <p class="description">Here is a desription of a very lovely bathbomb. 
@@ -125,183 +120,67 @@
               <a href="">lavender oil,</a>
               <a href=""> alantonin,</a>
               <a href=""> salicylic acid</a>
-              <i class="fa-solid fa-plus"></i>
+              <i class="fa-solid fa-plus" onclick="showIngredients(this)"></i>
+              <p id="ingredientList" class="hidden">aqua, talc, foaming agent (cococamidol beitaine), 
+                lavender oil, macadamia butter, alantonin, glycerine, salicylic acid, 
+                parfum, rosewater, ascorbic acid.</p>
             </p>
           </div>
-            <div class="size-buttons">
-              <button class="minor">20g</button>
-              <button class="minor selected-minor-button">40g</button>
-            </div>
-            <div class="desc-end">
+          <div class="desc-end">
+              <div class="tags-buttons">
+                <button class="grey-btn">20g</button>
+                <button class="grey-btn">sphere</button>
+                <button class="grey-btn">floral</button>
+              </div>
               <p class="item-page-price"><span>10 USD</span>5 USD</p>
               <p>50% off until Friday</p>
-              <div class="cart-and-quantity">
+              <div class="cart-and-quantity individual-product">
                 <div class="quantity-adjustment-container individual-product">
-                  <i class="fa-solid fa-minus"></i>
-                  <p>1</p>
-                  <i class="fa-solid fa-plus"></i>
+                  <i onclick="decrement(id)" class="fa-solid fa-minus"></i>
+                  <p class="quantity" id="jsnfnjdngjts">
+                    1
+                  </p>
+                  <i onclick="increment(id)" class="fa-solid fa-plus"></i>
                 </div>
-                <a class ="add-to-basket" href="basket.html">
-                  <button class="cta">
+                  <div onclick="addToBasket(id)" class="add-to-basket">
                     <i class="fa-solid fa-basket-shopping"></i>
-                  </button>
-                </a>
-              </div>
+                  </div>
+              </div> 
             </div>
         </div>
     </div>
 </div>
 
 <h2 class="suggestions-title">YOU MIGHT ALSO ENJOY</h2>
-  <div class="products-grid suggestions">
 
-    <div class="products-grid-item">
-      <a href="strawberry-cream.html">
-        <div class="item-image">
-          <img src="./src/img/PLACEHOLDER-REMOVE-LATER -4.png" alt="">
-        </div>
-        <h2 class="item-name">STRAWBERRY CREAM</h2>
-      </a>
-      <div class="flex">
-        <div class="item-properties">
-            <p class="item-weight">20g</p>
-            <p class="item-price">5 USD</p>
-            <p class="quantity">20 IN STOCK</p>
-        </div>
-        <a href="basket.html">
-          <i class="fa-solid fa-basket-shopping"></i>
-        </a>
-      </div>
+<div class="suggestions-container flex">
+
+  <button class="carousel-button button-left">
+    <i class="fa-solid fa-chevron-left inactive"></i>
+  </button>
+
+  <div class="slider">
+    <div class="products-grid suggestions slider-track" id="suggestions">
     </div>
-
-    <div class="products-grid-item">
-      <div class="item-image">
-        <img src="./src/img/PLACEHOLDER-REMOVE-LATER -2.png" alt="">
-      </div>
-      <h2 class="item-name">GALACTIC DREAM</h2>
-      <div class="flex">
-        <div class="item-properties">
-            <p class="item-weight">10g</p>
-            <p class="item-price">7 USD</p>
-            <p class="quantity low-quantity">3 IN STOCK</p>
-        </div>
-        <a href="basket.html">
-          <i class="fa-solid fa-basket-shopping"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="products-grid-item">
-      <div class="item-image">
-        <img src="./src/img/PLACEHOLDER-REMOVE-LATER -7.png" alt="">
-      </div>
-      <h2 class="item-name">LIME SORBET</h2>
-      <div class="flex">
-        <div class="item-properties">
-            <p class="item-weight">20g</p>
-            <p class="item-price">25 USD</p>
-            <p class="quantity out-of-stock">OUT OF STOCK</p>
-        </div>
-        <a href="basket.html">
-          <i class="fa-solid fa-basket-shopping out-of-stock"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="products-grid-item">
-      <div class="item-image">
-        <img src="./src/img/PLACEHOLDER-REMOVE-LATER -3.png" alt="">
-      </div>
-      <h2 class="item-name">PEANUT BUTTER JELLY SANDWICH</h2>
-      <div class="flex">
-        <div class="item-properties">
-            <p class="item-weight">50g</p>
-            <p class="item-price">15 USD</p>
-            <p class="quantity">11 IN STOCK</p>
-        </div>
-        <a href="basket.html">
-          <i class="fa-solid fa-basket-shopping"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="products-grid-item">
-      <div class="item-image">
-        <img src="./src/img/PLACEHOLDER-REMOVE-LATER -5.png" alt="">
-      </div>
-      <h2 class="item-name">PINACOLADA VACATION</h2>
-      <div class="flex">
-        <div class="item-properties">
-            <p class="item-weight">50g</p>
-            <p class="item-price">15 USD</p>
-            <p class="quantity">11 IN STOCK</p>
-        </div>
-        <a href="basket.html">
-          <i class="fa-solid fa-basket-shopping"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="products-grid-item">
-      <div class="item-image">
-        <img src="./src/img/PLACEHOLDER-REMOVE-LATER -6.png" alt="">
-      </div>
-      <h2 class="item-name">SUNSHINE 'N' RAINBOWS</h2>
-      <div class="flex">
-        <div class="item-properties">
-            <p class="item-weight">50g</p>
-            <p class="item-price">15 USD</p>
-            <p class="quantity">11 IN STOCK</p>
-        </div>
-        <a href="basket.html">
-          <i class="fa-solid fa-basket-shopping"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="products-grid-item">
-      <a href="strawberry-cream.html">
-        <div class="item-image">
-          <img src="./src/img/PLACEHOLDER-REMOVE-LATER -1.png" alt="">
-        </div>
-        <h2 class="item-name">STRAWBERRY CREAM</h2>
-      </a>
-      <div class="flex">
-        <div class="item-properties">
-            <p class="item-weight">20g</p>
-            <p class="item-price">5 USD</p>
-            <p class="quantity">20 IN STOCK</p>
-        </div>
-        <a href="basket.html">
-          <i class="fa-solid fa-basket-shopping"></i>
-        </a>
-      </div>
-    </div>
-
-    <div class="products-grid-item">
-      <div class="item-image">
-        <img src="./src/img/PLACEHOLDER-REMOVE-LATER -5.png" alt="">
-      </div>
-      <h2 class="item-name">STRAWBERRY DREAM</h2>
-      <div class="flex">
-        <div class="item-properties">
-            <p class="item-weight">50g</p>
-            <p class="item-price">15 USD</p>
-            <p class="quantity">11 IN STOCK</p>
-        </div>
-        <a href="basket.html">
-          <i class="fa-solid fa-basket-shopping"></i>
-        </a>
-      </div>
-    </div>
-
   </div>
+
+  <button class="carousel-button button-right">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+
 </div>
+
+
 
   <!------ Contact Footer ------>
 
 
     <section class="contact-footer" id="kontakt">
+      <div class="wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+        </svg>
+      </div>
       <div class="contact-footer-col contact-footer-menu">
           <h5>MENU</h5>
           <ul class="contact-menu">
@@ -355,10 +234,14 @@
 
 </main>
 
-<script src="/src/update-basket.js"></script>
 
 <!----JavaScript for toggle menu---->
 <script src="/src/menu.js"></script> 
+
+<script src="/src/product-data.js"></script>
+<script src="/src/individual-product-page.js"></script>
+
+<script src="/src/slider.js"></script>
 
 
 </body>
