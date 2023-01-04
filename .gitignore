@@ -23,4 +23,8 @@ dist-ssr
 *.sln
 *.sw?
 
-.img/PLACEHOLDER*
+# Custom ignored files
+PLACEHOLDER-*
+package-lock.json
+package.json
+vite.svg
