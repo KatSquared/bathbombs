@@ -165,13 +165,13 @@ let totalAmount = () => {
 
                     <div class="coupon-container" method="post">
                         <form action="" class="flex coupon-form">
-                            <input type="text" name="coupon" placeholder="Add a coupon (optional)">
+                            <input type="text" name="coupon" placeholder="Add a coupon (optional)" size="10">
                             <button type="submit" class="ghost-btn">Apply</button>
                         </form>    
                     </div>
 
                     <div class="checkout">
-                        <button class="cta" onclick="purchase(), clearCart()">
+                        <button class="cta" onclick="purchase()">
                             <i class="fa-solid fa-basket-shopping"></i>
                             PROCEED TO CHECKOUT
                         </button>
@@ -183,6 +183,12 @@ let totalAmount = () => {
 totalAmount();
 
 
+const purchaseConfirmation = document.getElementById('purchase-confirmation');
+
 function purchase() {
-    alert("Thank you for your purchase! Stock had been reduced.");
+    purchaseConfirmation.classList.remove('hidden');
   }
+
+function closePopup() {
+    purchaseConfirmation.classList.add('hidden');
+}

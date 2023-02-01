@@ -96,8 +96,8 @@ let generateSuggestions = () => {
       let {id, img, name, weight, price, stock} = x;
       if (stock <= 0) return; 
       return `
-        <div class="products-grid-item" id="product-id-${id}">
-          <a href="blueberry-dream-jsnfnjdngjts.html">
+        <div class="products-grid-item slider-item" id="product-id-${id}">
+          <a href="blueberry-dream.html">
             <div class="item-image">
               <img src="${img}" alt="${name} photo">
             </div>
@@ -108,8 +108,8 @@ let generateSuggestions = () => {
                 <p class="item-weight">${weight}g</p>
                 <p class="item-price">${price} USD</p> 
             </div>
-            <button class="cta">
-                <div id="${id}" onclick="addToBasket(${id})" class="add-to-basket">
+            <button class="add-to-basket">
+                <div id="${id}" onclick="addToBasket(${id})">
                   <i class="fa-solid fa-basket-shopping"></i>
                 </div>
             </button>

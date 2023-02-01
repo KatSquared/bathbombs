@@ -1,4 +1,162 @@
 //
+// FILTERS COMPONENT GENERATION
+//
+
+let filtersComponent = document.getElementById('filters');
+
+let makeFiltersComponent = () => {
+    return filtersComponent.innerHTML = `
+        <div class="filters-container">
+            <div class="category-filters-container">
+            <div class="category-dropdown" id="dropdown">
+                <div class="flex dropdown-btn" id="dropdown-btn">
+                <p>Shape</p>
+                <i class="fa-solid fa-angle-down" id="caret"></i>
+                </div>
+                <div class="dropdown-content" id="dropdown-content">
+                <div class="flex">
+                    <i class="fa-regular fa-square category-filter" id="sphere" data-category="shape"></i>
+                    <p class="category-filter" id="sphere">Sphere</p>
+                </div>
+                <div class="flex">
+                    <i class="fa-regular fa-square category-filter" id="star-n-heart" data-category="shape"></i>
+                    <p class="category-filter" id="star">Star&Heart</p>
+                </div>
+                <div class="flex">
+                    <i class="fa-regular fa-square category-filter" id="other" data-category="shape"></i>
+                    <p class="category-filter" id="heart">Other</p>
+                </div>
+                <div class="flex">
+                    <i class="fa-regular fa-square category-filter" id="dessert" data-category="shape"></i>
+                    <p class="category-filter" id="cupcake">Dessert</p>
+                </div>
+                </div>
+            </div>
+
+            <div class="category-dropdown" id="dropdown">
+                <div class="flex dropdown-btn" id="dropdown-btn">
+                <p>Smell</p>
+                <i class="fa-solid fa-angle-down" id="caret"></i>
+                </div>
+                <div class="dropdown-content" id="dropdown-content">
+                <div class="flex">
+                    <i class="fa-regular fa-square category-filter" id="fruity" data-category="smell"></i>
+                    <p class="category-filter" id="fruity">Fruity</p>
+                </div>
+                <div class="flex" id="floral">
+                    <i class="fa-regular fa-square category-filter" id="floral" data-category="smell"></i>
+                    <p class="category-filter" id="floral">Floral</p>
+                </div>
+                <div class="flex"  id="warm">
+                    <i class="fa-regular fa-square category-filter" id="warm" data-category="smell"></i>
+                    <p class="category-filter" id="warm">Warm</p>
+                </div>
+                <div class="flex" id="fresh">
+                    <i class="fa-regular fa-square category-filter" id="refreshing" data-category="smell"></i>
+                    <p class="category-filter" id="fresh">Refreshing</p>
+                </div>
+                </div>
+            </div>
+            </div>
+            
+            <div class="sort-by-filter" id="dropdown">
+            <div class="flex dropdown-btn" id="dropdown-btn">
+                <p>Sort by</p>
+                <i class="fa-solid fa-angle-down"></i>
+            </div>
+            <div class="dropdown-content" id="dropdown-content">
+                <div class="flex selected-option">
+                <i class="fa-solid fa-wand-magic-sparkles sorting-options" id="relevancy"></i>
+                <p class="sorting-options" id="relevancy">Relevancy</p>
+                </div>
+                <div class="flex">
+                <i class="fa-regular fa-face-grin-stars sorting-options" id="popularity"></i>
+                <p class="sorting-options" id="popularity">Popularity</p>
+                </div>
+                <div class="flex">
+                <i class="fa-solid fa-arrow-up sorting-options" id="price-up"></i>
+                <p class="sorting-options" id="price-up">Price Up</p>
+                </div>
+                <div class="flex">
+                <i class="fa-solid fa-arrow-down sorting-options" id="price-down"></i>
+                <p class="sorting-options" id="price-down">Price Down</p>
+                </div>
+            </div>
+            </div>
+        </div>
+    `
+}
+
+makeFiltersComponent();
+
+
+//
+// SPECIAL OFFER COMPONENT GENERATION
+//
+
+let specialOfferComponent = document.getElementById('special-offer');
+
+let makeSpecialOfferComponent = () => {
+    return specialOfferComponent.innerHTML = `
+        <h2>SPECIAL OFFER</h2>
+            <div class="special-offer-container">
+            <button class="carousel-button button-left">
+                <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            <div class="special-offer-carousel carousel">
+                <div class="special-offer-carousel-track carousel-track">
+
+                <!--COPY OF LAST SLIDE-->
+                <div class="special-item">
+                    <div class="discount-label">
+                    <p>-50%</p>
+                    </div>
+                    <img src="/src/img/bathbomb16.png" alt="bathbombs sidebar image">    
+                </div>
+
+                <!--normal slides-->
+                <div class="special-item">
+                    <div class="discount-label">
+                    <p>-40%</p>
+                    </div>
+                    <img src="/src/img/bathbomb9.png" alt="bathbombs sidebar image">        
+                </div>
+            
+                <div class="special-item">
+                    <div class="discount-label">
+                    <p>-30%</p>
+                    </div>
+                    <img src="/src/img/bathbomb6.png" alt="bathbombs sidebar image">         
+                </div>
+            
+                <div class="special-item">
+                    <div class="discount-label">
+                    <p>-50%</p>
+                    </div>
+                    <img src="/src/img/bathbomb16.png" alt="bathbombs sidebar image">        
+                </div>
+
+                <!--COPY OF FIRST SLIDE-->
+                <div class="special-item">
+                    <div class="discount-label">
+                    <p>-40%</p>
+                    </div>
+                    <img src="/src/img/bathbomb9.png" alt="bathbombs sidebar image">        
+                </div>
+                </div>
+            </div>
+
+            <button class="carousel-button button-right">
+                <i class="fa-solid fa-chevron-right"></i>
+            </button>
+        </div>
+    `
+}
+
+if (specialOfferComponent) makeSpecialOfferComponent();
+
+
+//
 // FILTER DROPDOWNS //
 //
 
@@ -14,7 +172,7 @@ dropdowns.forEach(dropdown => {
   })
 })
 
-document.addEventListener('click', function(e) {
+document.addEventListener('click', (e) => {
   if (e.target.closest('#dropdown-content')) return;
 
   dropdowns.forEach(dropdown => {
@@ -52,7 +210,7 @@ let filtered = shopItemsData;
 
 
 // Processing value of filters input by users
-document.addEventListener('click', function(e) {
+document.addEventListener('click', (e) => {
   // checks if element clicked is a category filter
   if (!categoryFilters.includes(e.target)) {
     // returns if element clicked isn't a category filter or sorting option
@@ -109,7 +267,7 @@ document.addEventListener('click', function(e) {
 
 // Filtering items by tags
 let filterItems = () => {
-  filtered = shopItemsData
+  filtered = products
   .filter(item => {
     if (shapeFilters.length === 0) return true;
 
@@ -139,7 +297,8 @@ let sortItems = (sortBy) => {
     case 'popularity':
         return filtered.sort((a, b) => b.popularity - a.popularity);
     case 'price-up':
-        return filtered.sort((a, b) => a.price - b.price);
+        return filtered.sort((a, b) => 
+          (a.price - (a.price * a.discount/100)) - (b.price - (b.price * b.discount/100)));
     case 'price-down':
         return filtered.sort((a, b) => b.price - a.price);
     default:
@@ -153,8 +312,22 @@ let sortItems = (sortBy) => {
 //
 
 let shop = document.getElementById('shop');
+let products = shopItemsData;
 let selection = [];
 let basket = JSON.parse(localStorage.getItem("basket")) || [];
+
+let productTypeFilter = () => {
+  switch(shop.className){
+    case 'products-grid bathbombs':
+      return products = shopItemsData.filter(item => item.category == 'BATHBOMB');
+    case 'products-grid soaps':
+      return products = shopItemsData.filter(item => item.category == 'SOAP');
+    case 'products-grid special-offer':
+      return products = shopItemsData.filter(item => item.discount != 0);
+    default:
+      return products;
+  }
+}
 
 let stockLabel = (stock) => {
     if (stock >= 15)
@@ -170,24 +343,33 @@ let buttonDisable = (stock) => {
 }
 
 let generateShop = () => {
+    productTypeFilter();
     filterItems();
     sortItems(sortBy);
     return (shop.innerHTML = filtered
       .map((x) => {
-        let {id, img, name, weight, price, stock} = x;
+        let {id, img, name, weight, price, discount, stock} = x;
         let search = selection.find((x) => x.id === id) || [];
         return `
           <div class="products-grid-item" id="product-id-${id}">
-            <a href="blueberry-dream-jsnfnjdngjts.html">
+            <a href="blueberry-dream.html">
               <div class="item-image">
                 <img src="${img}" alt="${name} photo">
+                ${discount == 0 ? '' : `
+                  <div class="discount-label">
+                    <p>-${discount}%</p>
+                  </div>
+                `}
               </div>
               <h2 class="item-name">${name}</h2>
             </a>
             <div class="flex">
               <div class="item-properties">
                   <p class="item-weight">${weight}g</p>
-                  <p class="item-price">${price} USD</p>
+                  <p class="item-price">${discount != 0 ? `
+                    <span style="text-decoration: line-through">${price} USD</span>
+                    <span style="font-weight: 600"> ${Math.round(price - (discount/100 * price))} USD</span>
+                  ` : `${price} USD`}</p>
               </div>
             </div>
             <div class="cart-and-quantity">
@@ -198,9 +380,9 @@ let generateShop = () => {
                 </p>
                 <i onclick="increment(${id})" class="fa-solid fa-plus"></i>
               </div>
-                <div onclick="addToBasket(${id})" class="add-to-basket ${buttonDisable(stock)}">
+                <button onclick="addToBasket(${id})" class="add-to-basket ${buttonDisable(stock)}">
                   <i class="fa-solid fa-basket-shopping"></i>
-                </div>
+                </button>
             </div> 
             ${stockLabel(stock)}
           </div>

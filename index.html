@@ -14,211 +14,194 @@
   </head>
   <body>
 
+<!---------- Canvas with Three.js ----------->  
 
 <canvas id="background"></canvas>   
 
 <!---------- Shorthand ----------->   
 
-<section class="shorthand">
-  <div class="logo">
-    <a href="index.html"><p class="logo-letters">:BB:</p></a>
-    <a href="index.html"><p class="logo-desc">BOOMBASTIC<br>BATHBOMBS</p></a>
-     
-  </div>
-  
-  <div class="shorthand-offer">
-      <a href="tel:+48504412332">OUR SPECIAL LIMITED OFFER STARTS NOW.<br>FREE SHIPPING, 
-          FREE WRAPPING, ALL 50% OFF.
-      </a>
-  </div>
-  <div class="shorthand-menu">
-      <div class="shorthand-menu__label">
-          <i class="fa-solid fa-magnifying-glass"></i>
-          <i class="fa-solid fa-user"></i>
-          <a href=basket.html class="cart-icon-and-amount">
-            <i class="fa-solid fa-basket-shopping"></i>
-            <p id="cartAmount">0</p>
-          </a>
-          <i class="fa-solid fa-bars" onclick="showMenu()"></i>
-      </div>
-      
-      <div class="menu-links" id="menuLinks"> 
-          <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
-          <ul>
-              <li><a href="#landing">STRONA GŁÓWNA</a></li>
-              <li><a href="portfolio.html">PROJEKTY</a></li>
-              <li><a href="#kroki">NASZA OFERTA</a></li>
-              <li><a href="#about">O PRACOWNI</a></li>
-              <li><a href="#testimonials">REFERENCJE</a></li>
-              <li><a href="#kontakt">KONTAKT</a></li>
-          </ul>
-
-          <div class="menu-contact">
-              <a href="tel:+48504412332">
-                  +48 504 412 332
-              </a>
-              <a href="tel:91 834 56 78">
-                  91 834 56 78
-              </a>
-              <a href="mailto:wioletta.kmita@gmail.com">
-                  wioletta.kmita@gmail.com
-              </a>
-          </div>
-      </div>
-  </div>
+<section class="shorthand" id="shorthand-navbar">
 </section>
 
-
-<section class="sections">
-  <div class="sections-links hidden">
-      <div class="section">
-        <a href="products.html">SPECIAL OFFER</a>
-      </div>
-      <div class="section">
-        <a href="products.html">BATHBOMBS</a>
-      </div>
-      <div class="section">
-        <a href="index.html">SOAPS & ACCESORIES</a>
-      </div>
-  </div>
+<section class="sections hidden" id="sections-navbar">
 </section>
 
 <!---------- MAIN ----------->
 
 <main>
-  <div class="grid">
+
+  
+
+  <div class="flex">
     <header>
-      <h1>:Boombastic Bathbombs:</h1>
-      <h3>Venture with us on a quest for the most satisfying baths in the universe
-      </h3>
+      <div class="header-main">
+        <div class="header-text">
+          <h1>:Boombastic Bathbombs:</h1>
+          <h3>Venture with us on a quest for the most satisfying baths in the universe
+          </h3>
+        </div>
+        <a  href="bathbombs.html">
+          <div class="circle" id="circle">
+            <p>SHOP<br>NOW!</p>
+          </div>
+        </a>
+
+      </div>
+      <blockquote class="first">
+        <p>- Explore -</p>
+      </blockquote>
     </header>
 
-    <div class="circle">
-      <p>BEST<br>DEALS</p>
+    <section id="mission">
+      <img src="/src/img/bathbomb15.png" alt="">
+      <h4>THE BEST BUBBLES EVER FOUND IN (A) BATH</h4>
+      <p>
+        Handmade bathbombs from a family-owned manufacture located in Bath, United Kingdom. 
+        <br>
+        Indulge yourself in luxurious, high quality
+        bathbombs & soaps which nourish and protect your skin.
+        A great way to start or end your day. Let Boombastic treat your body and senses.
+      </p>
+      <img src="/src/img/bathbomb4.png" alt="">
+      <h4>BEAUTIFUL INSIDE -N- OUT</h4>
+      <p>
+        Rest assured knowing that all products are 
+        vegan and cruelty free, using natural, ethically sourced ingredients.
+        <br>
+        Our products are made from recycled materials that use less energy to create, 
+        which means a smaller carbon footprint.
+      </p>
+      <img src="./src/img/bathbomb8.png" alt="">
+      <h4>THE LABOUR OF LOVE</h4>
+      <p>
+        The secret is in the formulation; each bomb has carefully 
+        selected essential oils, plant extracts and colourful swirls of cosmetic mica.
+        <br>
+        Our bathbombs & soaps are beautifully wrapped, each with an equipped customizable personal touch, 
+        which makes them the perfect gift.
+      </p>
+      <img src="/src/img/bathbomb7.png" alt="" srcset="">
+      <h4>A BATHBOMB FOR EVERY MOOD</h4>
+      <p>
+        Bathbombs are handmade and designed to add a sparkly touch and vibrant fragrance to your day, 
+        and our range is expanding all the time. 
+        <br>
+        We value our customers' wishes and taste and so we're always welcoming suggestions for new products. 
+      </p>
+      
+    </section>
+
+    <blockquote id="company">
+      <p>Wash it all away and invite inner peace</p>
+    </blockquote>
+
+    <section id="products" class="light">
+      <img src="/src/img/soap4.png" alt="">
+      <h4>SMALL BUSINESS, BIG HEART</h4>
+      <p>
+        We are a team of people with diverse backgrounds and experiences for one simple reason: we've got the best employees. 
+        <br>
+        We value diversity and love getting questions and suggestions about how we can do better.
+      </p>
+      <br>
+      <img src="/src/img/soap6.png" alt="">
+      <h4>BETTER FOR THE ENVIRONMENT, BETTER FOR YOU</h4>
+      <p>
+        Save the oceans with your boombastic purchase! For every bathbomb you purchase we'll donate 2% of the profits 
+        to "Save the Oceans" - a charity that raises awareness and funds toward marine life conservation.
+      </p>
+    </section>
+
+    <div class="insp-length hidden">
+      <h2>We are DECIEM</h2>
+      <h4>Science-backed formulas from The Chemistry Brand, Hylamide, and Abnomaly are still available, 
+        with a 50% saving, while supplies last.</h4>
+      <h1>Shop DECIEM</h1>
+
+      <h3>2020 changed the way we work. </h3>
+      Since 2020, DECIEM has used renewable energy credits powered by wind to minimize our impact on the planet. 
+      Together, we're creating a more sustainable future. 
+
+
+      images are about  6x larger than the text that accompanies them. 
+
+
+      <h3>The Ordinary Regimen Builder. </h3>
+      The Ordinary Regimen Builder is a simple four-minute quiz that targets several common skin concerns. 
+      The results offer product recommendations suitable for all skin types. 
+
+      <h2>A message to fellow humans.</h2> 
+      <h4>
+        Commit to Change, Change will Come takes an honest look at how we can improve our commitment 
+        to fighting racial and social injustice. 
+      </h4>
     </div>
 
-    <blockquote class="first">
-      <p>Explore</p>
-    </blockquote>
-
-    <blockquote>
-      <p>Wash it all away, wash it all and invite peace</p>
-    </blockquote>
-
-    <section>
-      <h2>Manifesto</h2>
-      <img src="./src/img/fruit-set.jpg" alt="">
-
-    </section>
-
-    <section class="light">
-      <h2>Projects</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-
-      <h2>Accomplishments</h2>
-
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-
-    </section>
-
-    <blockquote>
-      <p>The best way out is always through <br>-Robert Frost</p>
+   <blockquote id="testimonials">
+      <p>Change your life, one bath at a time.</p>
     </blockquote>
 
     <section class="left">
-      <h2>Work History</h2>
-
-      <h3>McDonalds</h3>
+      <h4>THE BOMB FOR YOUR BATH</h4>
       <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Our most popular seasonal special offer:
+        <br>
+        The adventurous bathbomb. Deluxe orange crush. Made with real food ingredients and ready to boost your skin 
+        and soothe your senses.
+        <br>
+        <br>
+        Design your own bathbomb online
+        <br>
+        Custom labels!
+        <br>
+        20% discount on bulk orders
+        <br>
+        Your bath will never smell so good! Enjoy our monthly subscription box filled with 
+        super fun and colorful bathbombs & soaps.
+        <br>
+        All of our bath bombs are handmade
+        <br>
+        Order before the end of March to receive a free gift with every order!      
+        <br>
+        <br>
+        1. Customer satisfaction guaranteed
+        <br>
+        2. Free shipping on orders over $45
+        <br>
+        3. Priority service
+        <br>
+        3. Family owned and operated
+        <br><br>
+        We're friendly folks and love to talk. Drop us a line at hello@boombath.com if you have any questions, 
+        comments, or other concerns.
       </p>
-      <h3>Burger King</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-      <h3>Taco Bell</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-      </p>
-
-    </section>
+    </section> 
 
     <blockquote>
-      <p>Thanks for watching!</p>
+      <p>Happy shopping!</p>
     </blockquote>
 
   </div>
 
+
   <!------ Contact Footer ------>
 
 
-    <section class="contact-footer" id="kontakt">
-      <div class="wave">
-        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-            <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
-        </svg>
-      </div>
-      <div class="contact-footer-col contact-footer-menu">
-          <h5>MENU</h5>
-          <ul class="contact-menu">
-              <li><a href="#landing">Strona główna</a></li>
-              <li><a href="portfolio.html">Projekty</a></li>
-              <li><a href="#kroki">Nasza oferta</a></li>
-              <li><a href="#about">O pracowni</a></li>
-              <li><a href="#testimonials">Referencje</a></li>
-          </ul>
-      </div>
+<section class="contact-footer" id="footer">
+</section>
 
-      <div class="contact-footer-col">
-          <h5>Pracownia Projektowa</h5>
-          <ul>
-              <li><i class="fa fa-home"></i><span>Adres:</span>
-                  <br>ul. Szczecińska 59<br>73-110 Stargard<br>II Piętro</li>
-              <li><i class="fa-solid fa-business-time"></i><span>Godziny pracy:</span>
-                  <br><span>PN-PT: </span>8:00 - 16:00</li>
-          </ul>
-      </div>
-
-      <div class="contact-footer-col dojazd">
-          <h5>Dojazd</h5>
-          <a href="https://goo.gl/maps/rrpUsVMW7rFqGvtt8" target="_blank">
-              <i class="fa-solid fa-location-dot"></i>
-          </a> 
-      </div>
-
-      <div class="contact-footer-col">
-          <h5>Dane kontaktowe</h5>
-          <ul>
-              <li><a href="tel:+48504412332">
-                  <i class="fa-solid fa-mobile"></i>+48 504 412 332
-              </li></a>
-              <li><a href="tel:91 834 56 78">
-                  <i class="fa fa-phone"></i>91 834 56 78
-              </li></a>
-              <li><a href="mailto:wioletta.kmita@gmail.com">
-                  <i class="fa-solid fa-envelope"></i> wioletta.kmita@gmail.com
-              </a></li>
-              <li><span>NIP:</span> 494 495 565 77</li>
-          </ul>
-      </div>
-
-      
-    </section>
-
-    <div class="footer-credit">
-      <p>Wykonanie: <span style="text-decoration: underline;">Katarzyna Kmita</span></p>
-    </div>
 
 </main>
 
 
-    
+
+
+
+
+
 <script type="module" src="src/index.js"></script>
+
+<script src="/src/navbar-and-footer-components.js"></script>
 
 <!----JavaScript for toggle menu---->
 <script src="src/menu.js"></script> 

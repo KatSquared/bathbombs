@@ -32,10 +32,10 @@ prevButton.addEventListener('click', e => {
 });
 
 // slides move to the right after clicking right
-nextButton.addEventListener('click', e => {
+let moveToNextSlide = () => {
     // prevents a bug when user clicks too fast for a transition to finish
     if (index >= slides.length-1) return;
-    
+        
     // returns transition to normal after jumping from one edge to another
     track.style.transition = 'transform 500ms ease-in-out';
     // finds the elements with the current class, what we are on NOW
@@ -45,8 +45,8 @@ nextButton.addEventListener('click', e => {
 
     index++;
     moveToSlide(track);
-});
-
+}
+nextButton.addEventListener('click', e => moveToNextSlide());
 
 // looping
 track.addEventListener('transitionend', e => {
@@ -64,3 +64,6 @@ track.addEventListener('transitionend', e => {
         index = slides.length-2;
     } else return;
 }, false)
+
+// automatic scroll
+setInterval(moveToNextSlide, 10000);

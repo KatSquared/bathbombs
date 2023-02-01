@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Blueberry Dream - Boombastic Bathbombs</title>
+    <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&family=DM+Serif+Text:ital@0;1&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet"> 
+    <script src="https://kit.fontawesome.com/d7195f3535.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/src/style.css">
+  </head>
+  <body>
+
+<div class="page-background"></div>
+
+<!---------- Shorthand ----------->   
+
+<section class="shorthand item-page-shorthand"  id="shorthand-navbar">
+</section>
+
+
+<section class="sections products-page-sections blue-sections" id="sections-navbar">
+</section>
+
+<!---------- MAIN ----------->
+
+<div class="container">
+    <div class="breadcrumbs">
+        <p>Home</p>
+        <i class="fa-solid fa-angle-right"></i>
+        <p>Bathbombs</p>
+        <i class="fa-solid fa-angle-right"></i>
+        <p>Blueberry Dream</p>
+    </div>
+    <div class="small-device-intro">
+      <h2>:BLUEBERRY DREAM:</h2>
+      <h3>BATHBOMB</h3>
+    </div>
+    <div class="product-container">
+        <div class="product-images">
+          <div class="other-images">
+            <img src="./src/img/blue-water.png" onclick="changeImage(this)">
+            <img src="./src/img/blue-bath.jpg" onclick="changeImage(this)">
+            <img src="./src/img/bag.png" onclick="changeImage(this)">
+          </div>
+          <div class="current-image">
+            <img src="./src/img/bathbomb.png" id="currentImage">
+          </div>
+        </div>
+        <div class="product-info">
+          <div>
+            <div class="large-device-intro">
+              <h2>:BLUEBERRY DREAM:</h2>
+              <h3>BATHBOMB</h3>
+            </div>
+            <div class="very-small-device-description">
+              <h4>Description</h4>
+            </div>
+            <p class="description">Here is a description of a very lovely bathbomb. 
+              It has blueberry scent and dissolves into dark purplish blue.</p>
+            <h4>How to use</h4>
+            <p >Intended use includes throwing the bathbomb into your bath.
+              It isn't edible, despite how lovely it smells. 
+              It isn't toxic but tastes like soap so don't even try.</p>
+            <h4>Fragnance</h4>
+            <p>blueberry, lemon, lavender</p>
+            <h4>Key Ingredients</h4>
+            <div class="ingredients">
+              <div class="flex">
+                <p>lavender oil, alantonin, salicylic acid</p>
+                <div class="tooltip">
+                  <i class="fa-solid fa-plus" onclick="showIngredients(this)"></i>
+                  <p class="tooltip-text">Show all ingredients</p> 
+                </div> 
+              </div>
+              <p id="ingredientList" class="hidden">aqua, talc, foaming agent (cococamidol beitaine), 
+                lavender oil, macadamia butter, alantonin, glycerine, salicylic acid, 
+                parfum, rosewater, ascorbic acid.</p>
+            </div>
+          </div>
+          <div>
+              <div class="tags-buttons">
+                <button class="grey-btn">20g</button>
+                <button class="grey-btn">sphere</button>
+                <button class="grey-btn">fruity</button>
+              </div>
+              <p class="item-page-price"><span>10 USD</span>5 USD</p>
+              <p>50% off until Friday</p>
+              <div class="cart-and-quantity individual-product">
+                <div class="quantity-adjustment-container individual-product ">
+                  <i onclick="decrement(id)" class="fa-solid fa-minus"></i>
+                  <p class="quantity" id="jsnfnjdngjts">
+                    1
+                  </p>
+                  <i onclick="increment(id)" class="fa-solid fa-plus"></i>
+                </div>
+                  <button onclick="addToBasket(id)" class="add-to-basket">
+                    <i class="fa-solid fa-basket-shopping"></i>
+                  </button>
+              </div> 
+          </div>
+        </div>
+    </div>
+</div>
+
+<h2 class="suggestions-title">YOU MIGHT ALSO ENJOY</h2>
+
+<div class="suggestions-container flex">
+
+  <button class="carousel-button button-left">
+    <i class="fa-solid fa-chevron-left inactive"></i>
+  </button>
+
+  <div class="slider">
+    <div class="products-grid suggestions slider-track" id="suggestions">
+    </div>
+  </div>
+
+  <button class="carousel-button button-right">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+
+</div>
+
+
+
+  <!------ Contact Footer ------>
+
+
+<section class="contact-footer" id="footer">
+</section>
+
+</main>
+
+
+<script src="/src/navbar-and-footer-components.js"></script>
+
+<!----JavaScript for toggle menu---->
+<script src="/src/menu.js"></script> 
+
+<script src="/src/product-data.js"></script>
+<script src="/src/individual-product-page.js"></script>
+
+<script src="/src/slider.js"></script>
+
+
+</body>
+</html>

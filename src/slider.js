@@ -5,8 +5,12 @@ const item = document.querySelector('.products-grid-item');
 const nextButton = document.querySelector('.button-right i');
 const prevButton = document.querySelector('.button-left i');
 
+let margin = '';
+if (window.innerWidth < 900) margin = 60;
+else margin = 120;
+
 const containerWidth = container.getBoundingClientRect().width;
-const slideWidth = slides[0].getBoundingClientRect().width + 120;
+const slideWidth = slides[0].getBoundingClientRect().width + margin;
 const trackWidth = slides.length * slideWidth;
 
 let index = 0;
@@ -23,7 +27,7 @@ const moveToSlide = (track) => {
     // slides only the remaining amount to the border of container and hides nextButton
     if (amountToMove >= trackWidth - containerWidth ) {
         nextButton.classList.add('inactive');
-        amountToMove = (index-1) * slideWidth + containerWidth % slideWidth + 120;
+        amountToMove = (index-1) * slideWidth + containerWidth % slideWidth + margin;
         track.style.transform = 'translateX(' + -amountToMove + 'px)';
         return;
     }

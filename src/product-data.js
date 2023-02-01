@@ -1,122 +1,350 @@
 let shopItemsData = [
     {
         id: 'jsnfnjdngjts',
-        img: './src/img/PLACEHOLDER-REMOVE-LATER -1.png',
+        img: './src/img/bathbomb.png',
         name: 'BLUEBERRY DREAM',
-        slug: 'blueberry-dream',
         weight: 20,
         price: 5,
-        category: 'BATHBOMBS',
+        discount: 0,
+        category: 'BATHBOMB',
         stock: 99,
         popularity: 4,
         tags: {
-            shape: 'star',
+            shape: 'sphere',
             smell: 'fruity'
         }
     }, 
     {
         id: 'jajsfjsdgjkn',
-        img: './src/img/PLACEHOLDER-REMOVE-LATER -2.png',
-        name: 'STRAWBERRY CREAM',
-        slug: 'strawberry-dream',
+        img: './src/img/bathbomb7.png',
+        name: 'STRAWBERRY FUN',
         weight: 20,
         price: 5,
-        category: 'BATHBOMBS',
+        discount: 30,
+        category: 'BATHBOMB',
         stock: 15,
         popularity: 1,
+        tags: {
+            shape: 'dessert',
+            smell: 'fruity'
+        }
+    }, 
+    {
+        id: 'ytifkyutddkt',
+        img: './src/img/bathbomb6.png',
+        name: 'JUST RELAX',
+        weight: 5,
+        price: 12,
+        discount: 40,
+        category: 'BATHBOMB',
+        stock: 99,
+        popularity: 1,
+        tags: {
+          shape: 'star-n-heart',
+          smell: 'refreshing'
+          }
+    },
+    {
+        id: 'ndjgkrjnhtnhr',
+        img: './src/img/bathbomb3.png',
+        name: 'GALAXY TRIP',
+        weight: 25,
+        price: 10,
+        discount: 30,
+        category: 'BATHBOMB',
+        stock: 3,
+        popularity: 15,
+        tags: {
+            shape: 'star-n-heart',
+            smell: 'warm'
+        }
+    },
+    {
+        id: 'fgjyiro7r6p7',
+        img: './src/img/bathbomb10.png',
+        name: 'CHILDHOOD',
+        weight: 5,
+        price: 12,
+        discount: 0,
+        category: 'BATHBOMB',
+        stock: 99,
+        popularity: 13,
+        tags: {
+          shape: 'dessert',
+          smell: 'refreshing'
+          }
+    },
+    {
+        id: 'rdtjy6itkty',
+        img: './src/img/bathbomb2.png',
+        name: 'DREAMLAND',
+        weight: 30,
+        price: 7,
+        discount: 0,
+        category: 'BATHBOMB',
+        stock: 0,
+        popularity: 10,
         tags: {
             shape: 'sphere',
             smell: 'floral'
         }
     }, 
+     
     {
-        id: 'dghshktrjnjh',
-        img: './src/img/PLACEHOLDER-REMOVE-LATER -3.png',
-        name: 'LIME SORBET',
-        slug: 'lime-sorbet',
-        weight: 30,
-        price: 7,
-        category: 'BATHBOMBS',
-        stock: 99,
-        popularity: 12,
-        tags: {
-            shape: 'cupcake',
-            smell: 'fresh'
-        }
-    }, 
-    {
-        id: 'ndjgkrjnhtnhr',
-        img: './src/img/PLACEHOLDER-REMOVE-LATER -4.png',
-        name: 'GALAXY ROUND TRIP',
-        slug: 'galaxy-round-trip',
-        weight: 25,
-        price: 10,
-        category: 'BATHBOMBS',
-        stock: 3,
-        popularity: 5,
-        tags: {
-            shape: 'heart',
-            smell: 'warm'
-        }
-    }, 
-    {
-        id: 'fhdrjtdjyjty',
-        img: './src/img/PLACEHOLDER-REMOVE-LATER -5.png',
-        name: 'THE LAST UNICORN',
-        slug: 'the-last-unicorn',
+        id: 'rrtutytyktydtyj',
+        img: './src/img/bathbomb4.png',
+        name: 'MAKE A WISH',
         weight: 15,
         price: 8,
-        category: 'BATHBOMBS',
+        discount: 0,
+        category: 'SOAP',
         stock: 0,
-        popularity: 9,
+        popularity: 1,
         tags: {
-            shape: 'heart',
-            smell: 'fruity'
-        }
-    }, 
-    {
-      id: 'husr6dridit',
-      img: './src/img/PLACEHOLDER-REMOVE-LATER -7.png',
-      name: 'PEANUT BUTTER JELLY SANDWICH',
-      slug: 'peanut-butter-jelly-sandwich',
-      weight: 25,
-      price: 10,
-      category: 'BATHBOMBS',
-      stock: 10,
-      popularity: 6,
-      tags: {
-        shape: 'cupcake',
-        smell: 'fresh'
-        }
-    }, 
-    {
-      id: 'ytifkyutddkt',
-      img: './src/img/PLACEHOLDER-REMOVE-LATER- 8.png',
-      name: 'JUST RELAX',
-      slug: 'just-relax',
-      weight: 5,
-      price: 12,
-      category: 'BATHBOMBS',
-      stock: 99,
-      popularity: 2,
-      tags: {
-        shape: 'star',
-        smell: 'floral'
+            shape: 'star-n-heart',
+            smell: 'warm'
         }
     },
     {
-        id: 'eigsrejihjrth',
-        img: './src/img/PLACEHOLDER-REMOVE-LATER -6.png',
-        name: 'FLOWER POWER',
-        slug: 'flower-power',
+        id: 'rhdtrjuyttyjghnf',
+        img: './src/img/soap5.png',
+        name: 'GLITTER PINK',
+        weight: 5,
+        price: 12,
+        discount: 0,
+        category: 'SOAP',
+        stock: 99,
+        popularity: 22,
+        tags: {
+          shape: 'other',
+          smell: 'fruity'
+          }
+    }, 
+    {
+      id: 'ewgergrthst',
+      img: './src/img/bathbomb5.png',
+      name: 'FOREST BERRIES',
+      weight: 25,
+      price: 10,
+      discount: 0,
+      category: 'BATHBOMB',
+      stock: 10,
+      popularity: 16,
+      tags: {
+        shape: 'cupcake',
+        smell: 'fruity'
+        }
+    }, 
+    {
+        id: 'thtyjgyjftht',
+        img: './src/img/bathbomb8.png',
+        name: 'CHOCO LOVE',
+        weight: 5,
+        price: 12,
+        discount: 20,
+        category: 'BATHBOMB',
+        stock: 99,
+        popularity: 21,
+        tags: {
+          shape: 'star-n-heart',
+          smell: 'warm'
+          }
+      },
+      {
+        id: 'ewfdfbfgjyyh',
+        img: './src/img/bathbomb14.png',
+        name: 'FAIRY WINGS',
+        weight: 5,
+        price: 12,
+        discount: 30,
+        category: 'BATHBOMB',
+        stock: 99,
+        popularity: 8,
+        tags: {
+          shape: 'dessert',
+          smell: 'fruity'
+          }
+    },
+      {
+      id: 'erenmty67tunytf',
+      img: './src/img/bathbomb9.png',
+      name: 'PASTRY 4 LIFE',
+      weight: 5,
+      price: 12,
+      discount: 50,
+      category: 'BATHBOMB',
+      stock: 99,
+      popularity: 9,
+      tags: {
+        shape: 'dessert',
+        smell: 'warm'
+        }
+    },
+    
+    {
+        id: 'ertrb5ytrnunt',
+        img: './src/img/bathbomb11.png',
+        name: 'MINT SURPRISE',
+        weight: 5,
+        price: 12,
+        discount: 0,
+        category: 'BATHBOMB',
+        stock: 99,
+        popularity: 19,
+        tags: {
+          shape: 'dessert',
+          smell: 'refreshing'
+          }
+    },
+    {
+        id: 'stbgrdytfntf',
+        img: './src/img/bathbomb1.png',
+        name: 'DRIVE & DESIRE',
         weight: 30,
         price: 8,
-        category: 'BATHBOMBS',
+        discount: 0,
+        category: 'BATHBOMB',
         stock: 30,
-        popularity: 3,
+        popularity: 14,
         tags: {
             shape: 'sphere',
-            smell: 'warm'
+            smell: 'floral'
         }
-    }]
+    },
+    {
+        id: 'sertb456tmutfk',
+        img: './src/img/soap3.png',
+        name: 'PHANTASMAGORIA',
+        weight: 5,
+        price: 12,
+        discount: 0,
+        category: 'SOAP',
+        stock: 99,
+        popularity: 30,
+        tags: {
+          shape: 'star-n-heart',
+          smell: 'floral'
+          }
+    },
+    {
+        id: 'wetrdynse4rtdu',
+        img: './src/img/bathbomb16.png',
+        name: 'APPLE PIE',
+        weight: 15,
+        price: 8,
+        discount: 40,
+        category: 'BATHBOMB',
+        stock: 99,
+        popularity: 3,
+        tags: {
+          shape: 'dessert',
+          smell: 'warm'
+          }
+    },
+    {
+        id: 'ertb5untkjsehtb4v',
+        img: './src/img/soap2.png',
+        name: 'DRAGONFRUIT',
+        weight: 15,
+        price: 5,
+        discount: 15,
+        category: 'SOAP',
+        stock: 99,
+        popularity: 20,
+        tags: {
+          shape: 'dessert',
+          smell: 'fruity'
+          }
+    },
+    {
+        id: 'we5b345y6',
+        img: './src/img/bathbomb13.png',
+        name: 'ORANGE CHILLI',
+        weight: 3,
+        price: 15,
+        discount: 0,
+        category: 'BATHBOMB',
+        stock: 13,
+        popularity: 17,
+        tags: {
+          shape: 'sphere',
+          smell: 'fruity'
+          }
+    },
+    {
+        id: 'aw345etbh5uej',
+        img: './src/img/bathbomb15.png',
+        name: 'MIDNIGHT WALK',
+        weight: 25,
+        price: 12,
+        discount: 0,
+        category: 'BATHBOMB',
+        stock: 2,
+        popularity: 15,
+        tags: {
+          shape: 'dessert',
+          smell: 'fruity'
+          }
+    },
+    {
+        id: 'wrvw346wvyw4',
+        img: './src/img/bathbomb12.png',
+        name: 'REFRESHING WAVE',
+        weight: 10,
+        price: 12,
+        discount: 0,
+        category: 'SOAP',
+        stock: 99,
+        popularity: 14,
+        tags: {
+          shape: 'star-n-heart',
+          smell: 'refreshing'
+          }
+    },
+    {
+        id: 'ewrvwt35y',
+        img: './src/img/soap1.png',
+        name: 'GRAPE SODA',
+        weight: 12,
+        price: 13,
+        discount: 0,
+        category: 'SOAP',
+        stock: 0,
+        popularity: 11,
+        tags: {
+          shape: 'dessert',
+          smell: 'fruity'
+          }
+    },
+    {
+        id: 'wr4tve5ujd',
+        img: './src/img/soap4.png',
+        name: 'A WARM EMBRACE',
+        weight: 25,
+        price: 9,
+        discount: 0,
+        category: 'SOAP',
+        stock: 30,
+        popularity: 11,
+        tags: {
+          shape: 'star-n-heart',
+          smell: 'floral'
+          }
+    },
+    {
+        id: 'warbv54uc56ie',
+        img: './src/img/soap6.png',
+        name: 'THE UNIVERSE',
+        weight: 5,
+        price: 10,
+        discount: 25,
+        category: 'SOAP',
+        stock: 9,
+        popularity: 8,
+        tags: {
+          shape: 'other',
+          smell: 'refreshing'
+          }
+    }
+  ]
   
