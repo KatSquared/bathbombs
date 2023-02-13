@@ -37,7 +37,7 @@ let makeShorthandComponent = () => {
     </div>
 
     <div class="shorthand-offer">
-        <a href="tel:+48504412332">OUR SPECIAL LIMITED OFFER STARTS NOW.<br>FREE SHIPPING, 
+        <a href="special-offer.html">OUR SPECIAL LIMITED OFFER STARTS NOW.<br>FREE SHIPPING, 
             FREE WRAPPING, ALL 50% OFF.
         </a>
     </div>
@@ -67,9 +67,9 @@ let makeShorthandComponent = () => {
                 </div>
               </div>
               <li onclick="scrollToCompany()"><a href="#company">COMPANY</a></li>
-              <li onclick="scrollToMission()"><a href="#mission">OUR MISSION</a></li>
               <li onclick="scrollToProducts()"><a href="#products">PRODUCTS</a></li>
-              <li onclick="scrollToTestimonials()"><a href="#testimonials">TESTIMONIALS</a></li>
+              <li onclick="scrollToMission()"><a href="#mission">OUR MISSION</a></li>
+              <li onclick="scrollToSubscription()"><a href="#subscription">SUBSCRIPTION</a></li>
               <li onclick="scrollToContact()"><a href="#footer">CONTACT</a></li>
             </ul>
             <h1 class="menu-logo">:BB:</h1>
@@ -83,7 +83,6 @@ makeShorthandComponent();
 //
 // FOOTER COMPONENT GENERATION
 //
-
 let footer = document.getElementById('footer');
 
 let makeFooterComponent = () => {
@@ -139,26 +138,38 @@ let makeFooterComponent = () => {
       </div>
     </div>
       
+    <div class="attributions-container hidden" id="attributions-container">
+      <ul>
+        <li>Star: sifgeig</li>
+        <li>Heart: sfserge</li>
+      </ul>
+    </div>
+
     <div class="footer-credit">
-      <p>Design & implementation: <span style="text-decoration: underline;">Katarzyna Kmita</span></p>
+      <p>Design & implementation: 
+        <span style="text-decoration: underline;">Katarzyna Kmita</span>
+        <span>| 3D model attributions</span>
+        <i class="fa-solid fa-angle-up" id="attributions-caret" onclick="showAttributions()"></i>
+      </p>
     </div>
   `
 }
 
 makeFooterComponent();
 
+const showAttributions = () => {
+  let attributions = document.getElementById('attributions-container');
+  let attributionsCaret = document.getElementById('attributions-caret');
+  attributions.classList.toggle('hidden');
+  attributionsCaret.classList.toggle('fa-angle-down');
+  attributionsCaret.classList.toggle('fa-angle-up');
+}
+
 //
 // SMOOTH SCROLL TO PAGE SECTION
 //
 let scrollToCompany = () => {
   document.getElementById('company').scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-  });
-}
-
-let scrollToMission = () => {
-  document.getElementById('mission').scrollIntoView({
     behavior: 'smooth',
     block: 'start'
   });
@@ -171,8 +182,15 @@ let scrollToProducts = () => {
   });
 }
 
-let scrollToTestimonials = () => {
-  document.getElementById('testimonials').scrollIntoView({
+let scrollToMission = () => {
+  document.getElementById('mission').scrollIntoView({
+    behavior: 'smooth',
+    block: 'start'
+  });
+}
+
+let scrollToSubscription = () => {
+  document.getElementById('subsciption').scrollIntoView({
     behavior: 'smooth',
     block: 'start'
   });

@@ -95,7 +95,7 @@
                   <p class="quantity" id="jsnfnjdngjts">
                     1
                   </p>
-                  <i onclick="increment(id)" class="fa-solid fa-plus"></i>
+                  <i onclick="increment(id)" id="jsnfnjdngjts" class="fa-solid fa-plus"></i>
                 </div>
                   <button onclick="addToBasket(id)" class="add-to-basket">
                     <i class="fa-solid fa-basket-shopping"></i>
@@ -105,6 +105,25 @@
         </div>
     </div>
 </div>
+
+<!---------- Image preview popup ----------->
+
+<div class="popup-container hidden" id="popup">
+  <div class="main-popup">
+    <i onclick="closePopup()" class="fa-sharp fa-solid fa-xmark"></i>
+    <div class="flex">
+      <h2>Stay in our bubble</h2><br>
+      <p>From our mailing press to your fingertips - coupons, new arrival announcements, 
+        restocks, special events and more!</p>
+        <form action="" class="flex coupon-form">
+          <input type="email" name="coupon" placeholder="Your e-mail address" size="25">
+          <button type="submit" class="cta">SIGN UP</button>
+        </form>  
+    </div>
+  </div>
+</div>
+
+<!---------- Suggestions ----------->
 
 <h2 class="suggestions-title">YOU MIGHT ALSO ENJOY</h2>
 
@@ -143,6 +162,8 @@
 
 <script src="/src/product-data.js"></script>
 <script src="/src/individual-product-page.js"></script>
+
+<script src="/src/suggestions.js"></script>
 
 <script src="/src/slider.js"></script>
 

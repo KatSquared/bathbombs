@@ -22,6 +22,7 @@ scene.background = new Color("lightBlue");
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.01, 50);
 
+
 // disabling antialias because it won't work anyways since we're applying a pass later on
 // and so the default antialias will not work - we set up one as a pass instead
 const renderer = new THREE.WebGLRenderer({
@@ -37,17 +38,28 @@ renderer.setSize(window.innerWidth, window.innerHeight);
 camera.position.setZ(30);
 camera.position.setY(-3);
 
-const textureLoader = new THREE.TextureLoader();
+const loadingManager = new THREE.LoadingManager();
+const progressBar = document.getElementById('progress-bar');
+const progressContainer = document.getElementById('progress-container');
 
-const glbLoader = new GLTFLoader();
-
+loadingManager.onProgress = function(url, loaded, total) {
+    progressBar.value = (loaded / total) * 100;
+}
+loadingManager.onLoad = function() {
+    progressContainer.classList.add('fading');
+}
+loadingManager.onError = function(url) {
+    console.error(`Failed to load ${url}`);
+}
+       
+const textureLoader = new THREE.TextureLoader(loadingManager);
+const glbLoader = new GLTFLoader(loadingManager);
 
 // responsive resizing handler
 window.addEventListener('resize', function() {
     camera.aspect = window.innerWidth / window.innerHeight;
     camera.updateProjectionMatrix();
     renderer.setSize(window.innerWidth, window.innerHeight);
-    // labelRenderer.setSize(window.innerWidth, window.innerHeight);
 });
 
 renderer.render(scene, camera);
@@ -386,12 +398,33 @@ window.addEventListener('wheel', (event) => {
 //
 // OBJECT INTERACTION
 //
+
+// elements to exclude from raycasting
+const sections = Array.from(document.querySelectorAll('section'));
+const sectionsContent = Array.from(document.querySelectorAll('section *'));
+const blockquotes = Array.from(document.querySelectorAll('blockquote p'));
+const shorthandNavbar = document.getElementById('shorthand-navbar');
+const sectionsNavbar = document.getElementById('sections-navbar');
+const footer = document.getElementById('footer');
+
+const domElements = [];
+domElements.push(...sections, ...sectionsContent, ...blockquotes, shorthandNavbar, sectionsNavbar, footer);
+console.log(domElements)
+
+let isDomElement = false;
+
+
 // Event listener for hover
 const mousePosition = new THREE.Vector2();
 window.addEventListener('mousemove', (e) => {
     // normalising mouse position (because webGL coords are different from browser ones)
     mousePosition.x = (e.clientX / window.innerWidth) * 2 - 1;
     mousePosition.y = - (e.clientY / window.innerHeight) * 2 + 1;
+    if (domElements.includes(e.target)) {
+        isDomElement = false;
+        return;
+    }
+    isDomElement = true;
 });
 const rayCaster = new THREE.Raycaster();
 
@@ -400,8 +433,15 @@ const mousePositionOnClick = new THREE.Vector2();
 window.addEventListener('click', (e) => {
     mousePositionOnClick.x = (e.clientX / window.innerWidth) * 2 - 1;
     mousePositionOnClick.y = - (e.clientY / window.innerHeight) * 2 + 1;
+    if (domElements.includes(e.target)) {
+        isDomElement = false;
+        return;
+    }
+    isDomElement = true;
 })
 const clickRayCaster = new THREE.Raycaster();
+
+
 
 //
 // ON SCROLL ANIMATIONS
@@ -464,43 +504,47 @@ function animate(time) {
     labelFiveMesh.material.opacity = 0;
 
     for (let i = 0; i < intersects.length; i++){
-        // bathbombs
-        if (intersects[i].object.id === bathbomb.id) {
-            intersects[i].object.rotation.x = time / 1000;
-            intersects[i].object.rotation.y = time / 1000;
-            labelOneMesh.material.opacity = 1;
-        } 
-        else if (intersects[i].object.id === bathbombSecond.id) {
-            intersects[i].object.rotation.z = time / 1000;
-            labelTwoMesh.material.opacity = 1;
-        }
-        else if (intersects[i].object.id === bathbombThird.id) {
-            intersects[i].object.rotation.y = time / 1000;
-            labelThreeMesh.material.opacity = 1;
-        }
-        else if (intersects[i].object.id === 105) {
-            intersects[i].object.rotation.z = time / 1000;
-            labelFourMesh.material.opacity = 1;
-        }
-        else if (intersects[i].object.id === 92) {
-            heartModel.rotation.z = time / 1000;
-            labelFiveMesh.material.opacity = 1;
-        }
-        // labels
-        else if (intersects[i].object.id == labelOneMesh.id) {
-            labelOneMesh.position.z += Math.sin(step * 30) * 0.02;
-        }
-        else if (intersects[i].object.id == labelTwoMesh.id) {
-            labelTwoMesh.position.z += Math.sin(step * 30) * 0.02;
-        }
-        else if (intersects[i].object.id == labelThreeMesh.id) {
-            labelThreeMesh.position.z += Math.sin(step * 30) * 0.02;
-        }
-        else if (intersects[i].object.id == labelFourMesh.id) {
-            labelFourMesh.position.z += Math.sin(step * 30) * 0.02;
-        }
-        else if (intersects[i].object.id == labelFiveMesh.id) {
-            labelFiveMesh.position.z += Math.sin(step * 30) * 0.02;
+        // early return when it is a dom element that's on top 
+        // -> preventing accidental link opening
+        if (isDomElement) {
+            // bathbombs
+            if (intersects[i].object.id === bathbomb.id) {
+                intersects[i].object.rotation.x = time / 1000;
+                intersects[i].object.rotation.y = time / 1000;
+                labelOneMesh.material.opacity = 1;
+            } 
+            else if (intersects[i].object.id === bathbombSecond.id) {
+                intersects[i].object.rotation.z = time / 1000;
+                labelTwoMesh.material.opacity = 1;
+            }
+            else if (intersects[i].object.id === bathbombThird.id) {
+                intersects[i].object.rotation.y = time / 1000;
+                labelThreeMesh.material.opacity = 1;
+            }
+            else if (intersects[i].object.id === 105) {
+                intersects[i].object.rotation.z = time / 1000;
+                labelFourMesh.material.opacity = 1;
+            }
+            else if (intersects[i].object.id === 92) {
+                heartModel.rotation.z = time / 1000;
+                labelFiveMesh.material.opacity = 1;
+            }
+            // labels
+            else if (intersects[i].object.id == labelOneMesh.id) {
+                labelOneMesh.position.z += Math.sin(step * 30) * 0.02;
+            }
+            else if (intersects[i].object.id == labelTwoMesh.id) {
+                labelTwoMesh.position.z += Math.sin(step * 30) * 0.02;
+            }
+            else if (intersects[i].object.id == labelThreeMesh.id) {
+                labelThreeMesh.position.z += Math.sin(step * 30) * 0.02;
+            }
+            else if (intersects[i].object.id == labelFourMesh.id) {
+                labelFourMesh.position.z += Math.sin(step * 30) * 0.02;
+            }
+            else if (intersects[i].object.id == labelFiveMesh.id) {
+                labelFiveMesh.position.z += Math.sin(step * 30) * 0.02;
+            }
         }
     }
     
@@ -512,7 +556,11 @@ function animate(time) {
         let clickIntersects = clickRayCaster.intersectObjects(scene.children);
         
         for (let i = 0; i < clickIntersects.length; i++){
-            if (clickIntersects[i].object.id === labelOneMesh.id && labelOneMesh.material.opacity === 1) {
+            // early return when it is a dom element that's on top 
+            // -> preventing accidental link opening
+            if (isDomElement) return;
+
+            else if (clickIntersects[i].object.id === labelOneMesh.id && labelOneMesh.material.opacity === 1) {
                 if (!isLinkOneOpened) {
                     window.open('blueberry-dream.html');
                     isLinkOneOpened = true;

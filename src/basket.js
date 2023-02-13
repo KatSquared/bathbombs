@@ -3,8 +3,8 @@ let shoppingCart = document.getElementById('shopping-cart');
 let columnLabels = document.getElementById('column-labels');
 let message = document.getElementById('message');
 let basket = JSON.parse(localStorage.getItem("basket")) || [];
-let removeAll = document.getElementById('removeAll');
-let underline = document.getElementById('underline');
+const removeAll = document.getElementById('removeAll');
+const underline = document.getElementById('underline');
 
 let discount = 15;
 
@@ -60,6 +60,7 @@ let generateCartItems = () => {
         orderSummary.innerHTML= ``;
         removeAll.classList.add('hidden');
         underline.classList.add('hidden');
+        footer.style.marginTop = '400px';
         message.innerHTML = `
             <h2>Basket is empty... for now ;)</h2>
             <a href="index.html">
@@ -171,7 +172,7 @@ let totalAmount = () => {
                     </div>
 
                     <div class="checkout">
-                        <button class="cta" onclick="purchase()">
+                        <button class="cta" onclick="openPopup()">
                             <i class="fa-solid fa-basket-shopping"></i>
                             PROCEED TO CHECKOUT
                         </button>
@@ -181,14 +182,3 @@ let totalAmount = () => {
 };
 
 totalAmount();
-
-
-const purchaseConfirmation = document.getElementById('purchase-confirmation');
-
-function purchase() {
-    purchaseConfirmation.classList.remove('hidden');
-  }
-
-function closePopup() {
-    purchaseConfirmation.classList.add('hidden');
-}

@@ -16,7 +16,23 @@
 
 <!---------- Canvas with Three.js ----------->  
 
-<canvas id="background"></canvas>   
+<canvas id="background"></canvas>  
+
+<div class="progress-bar-container" id="progress-container" data-location="main">
+  <div class="progress-bar">
+    <progress id="progress-bar" value="0" max="100"></progress>
+  </div>
+
+  <div class="background-and-logo">
+    <div class="progress-bar-background">
+      <img src="/src/img/bathbomb.png" alt="loading-image" width="810px" height="753px">
+    </div>
+    <div class="progress-logo">
+      <p class="progress-logo-letters">:BB:</p>
+      <p class="progress-logo-desc">BOOMBASTIC BATHBOMBS</p>
+    </div>
+  </div>
+</div>
 
 <!---------- Shorthand ----------->   
 
@@ -26,13 +42,29 @@
 <section class="sections hidden" id="sections-navbar">
 </section>
 
+<!---------- Popup ----------->
+
+<div class="popup-container hidden" id="popup">
+  <div class="main-popup">
+    <i onclick="closePopup()" class="fa-sharp fa-solid fa-xmark"></i>
+    <div class="flex">
+      <h2>Let the relaxation begin</h2><br>
+      <p>Sign up to receive the Boombastic newsletter and you'll get all the newest arrival announcements, 
+        exclusive offers, coupon, special events and more!</p>
+        <form action="" class="flex coupon-form">
+          <input type="email" name="coupon" placeholder="Your e-mail address" size="25">
+          <button type="submit" class="cta">SIGN UP</button>
+        </form>  
+    </div>
+  </div>
+</div>
+
 <!---------- MAIN ----------->
 
-<main>
-
-  
+<main id="main">
 
   <div class="flex">
+
     <header>
       <div class="header-main">
         <div class="header-text">
@@ -47,141 +79,179 @@
         </a>
 
       </div>
-      <blockquote class="first">
+      <blockquote class="first" onclick="scrollToCompany()">
         <p>- Explore -</p>
       </blockquote>
     </header>
 
-    <section id="mission">
-      <img src="/src/img/bathbomb15.png" alt="">
-      <h4>THE BEST BUBBLES EVER FOUND IN (A) BATH</h4>
-      <p>
-        Handmade bathbombs from a family-owned manufacture located in Bath, United Kingdom. 
-        <br>
-        Indulge yourself in luxurious, high quality
-        bathbombs & soaps which nourish and protect your skin.
-        A great way to start or end your day. Let Boombastic treat your body and senses.
-      </p>
-      <img src="/src/img/bathbomb4.png" alt="">
-      <h4>BEAUTIFUL INSIDE -N- OUT</h4>
-      <p>
-        Rest assured knowing that all products are 
-        vegan and cruelty free, using natural, ethically sourced ingredients.
-        <br>
-        Our products are made from recycled materials that use less energy to create, 
-        which means a smaller carbon footprint.
-      </p>
-      <img src="./src/img/bathbomb8.png" alt="">
-      <h4>THE LABOUR OF LOVE</h4>
-      <p>
-        The secret is in the formulation; each bomb has carefully 
-        selected essential oils, plant extracts and colourful swirls of cosmetic mica.
-        <br>
-        Our bathbombs & soaps are beautifully wrapped, each with an equipped customizable personal touch, 
-        which makes them the perfect gift.
-      </p>
-      <img src="/src/img/bathbomb7.png" alt="" srcset="">
-      <h4>A BATHBOMB FOR EVERY MOOD</h4>
-      <p>
-        Bathbombs are handmade and designed to add a sparkly touch and vibrant fragrance to your day, 
-        and our range is expanding all the time. 
-        <br>
-        We value our customers' wishes and taste and so we're always welcoming suggestions for new products. 
-      </p>
-      
+  </div>
+
+  <div class="main-content">
+
+    <section class="center"  id="company">
+      <div class="main-col">
+        <div class="icon-container">
+          <i class="fa-regular fa-circle"></i>
+          <i class="fa-solid fa-circle"></i>
+        </div>
+        <h4>THE BEST BUBBLES EVER FOUND IN (A) BATH</h4>
+        <p>
+          Handmade bathbombs from a family-owned manufacture 
+          located in Bath, United Kingdom. 
+          <br><br>
+          Indulge yourself in luxurious, high quality
+          bathbombs & soaps which nourish and protect your skin.
+          A great way to start or end your day. 
+          Let Boombastic treat your body and senses!
+        </p>
+      </div>
     </section>
 
-    <blockquote id="company">
-      <p>Wash it all away and invite inner peace</p>
-    </blockquote>
-
-    <section id="products" class="light">
-      <img src="/src/img/soap4.png" alt="">
-      <h4>SMALL BUSINESS, BIG HEART</h4>
-      <p>
-        We are a team of people with diverse backgrounds and experiences for one simple reason: we've got the best employees. 
-        <br>
-        We value diversity and love getting questions and suggestions about how we can do better.
-      </p>
-      <br>
-      <img src="/src/img/soap6.png" alt="">
-      <h4>BETTER FOR THE ENVIRONMENT, BETTER FOR YOU</h4>
-      <p>
-        Save the oceans with your boombastic purchase! For every bathbomb you purchase we'll donate 2% of the profits 
-        to "Save the Oceans" - a charity that raises awareness and funds toward marine life conservation.
-      </p>
+    <section class="right" id="products">
+      <div class="main-col">
+        <div class="icon-container">
+          <i class="fa-regular fa-face-smile"></i>
+          <i class="fa-regular fa-face-smile-wink"></i>
+        </div>
+        <h4>A BATHBOMB FOR EVERY MOOD</h4>
+        <p>
+          The secret is in the formulation; each bomb has carefully 
+          selected essential oils, plant extracts and colourful swirls of cosmetic mica.
+          <br>
+          Our bathbombs & soaps are beautifully wrapped, each with an equipped customizable personal touch, 
+          which makes them the perfect gift.
+          </p>
+      </div>
     </section>
 
-    <div class="insp-length hidden">
-      <h2>We are DECIEM</h2>
-      <h4>Science-backed formulas from The Chemistry Brand, Hylamide, and Abnomaly are still available, 
-        with a 50% saving, while supplies last.</h4>
-      <h1>Shop DECIEM</h1>
-
-      <h3>2020 changed the way we work. </h3>
-      Since 2020, DECIEM has used renewable energy credits powered by wind to minimize our impact on the planet. 
-      Together, we're creating a more sustainable future. 
-
-
-      images are about  6x larger than the text that accompanies them. 
-
-
-      <h3>The Ordinary Regimen Builder. </h3>
-      The Ordinary Regimen Builder is a simple four-minute quiz that targets several common skin concerns. 
-      The results offer product recommendations suitable for all skin types. 
-
-      <h2>A message to fellow humans.</h2> 
-      <h4>
-        Commit to Change, Change will Come takes an honest look at how we can improve our commitment 
-        to fighting racial and social injustice. 
-      </h4>
-    </div>
-
-   <blockquote id="testimonials">
-      <p>Change your life, one bath at a time.</p>
-    </blockquote>
+    <section class="right video">
+      <video width="100%" height="auto" controls="controls">
+        <source src="/src/video/bathbomb.mp4" type="video/mp4">
+      </video>
+    </section>
 
     <section class="left">
-      <h4>THE BOMB FOR YOUR BATH</h4>
-      <p>
-        Our most popular seasonal special offer:
-        <br>
-        The adventurous bathbomb. Deluxe orange crush. Made with real food ingredients and ready to boost your skin 
-        and soothe your senses.
-        <br>
-        <br>
-        Design your own bathbomb online
-        <br>
-        Custom labels!
-        <br>
-        20% discount on bulk orders
-        <br>
-        Your bath will never smell so good! Enjoy our monthly subscription box filled with 
-        super fun and colorful bathbombs & soaps.
-        <br>
-        All of our bath bombs are handmade
-        <br>
-        Order before the end of March to receive a free gift with every order!      
-        <br>
-        <br>
-        1. Customer satisfaction guaranteed
-        <br>
-        2. Free shipping on orders over $45
-        <br>
-        3. Priority service
-        <br>
-        3. Family owned and operated
-        <br><br>
-        We're friendly folks and love to talk. Drop us a line at hello@boombath.com if you have any questions, 
-        comments, or other concerns.
-      </p>
-    </section> 
+      <blockquote>
+        <p>Wash it all away and invite inner peace</p>
+      </blockquote>
+    </section>
 
-    <blockquote>
-      <p>Happy shopping!</p>
-    </blockquote>
+    <section class="left">
+      <div class="main-col pink">
+        <div class="icon-container star-container">
+          <i class="fa-regular fa-star star"></i>
+        </div>
+        <h4>BEAUTIFUL INSIDE -N- OUT</h4>
+        <p>
+          Rest assured knowing that all products are 
+          vegan and cruelty free, using natural, ethically sourced ingredients.
+          <br>
+          Our products are made from recycled materials that use less energy to create, 
+          which means a smaller carbon footprint.
+        </p>
+      </div>
+    </section>
 
+    <section class="center"  id="mission" >
+      <div class="main-col pink">
+        <div class="icon-container">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+        <h4>BETTER FOR THE EARTH, BETTER FOR YOU</h4>
+        <p>
+          Save the oceans with your boombastic purchase! For every bathbomb you purchase we'll donate 2% of the profits 
+          to "Save the Oceans" - a charity that raises awareness and funds toward marine life conservation.
+        </p>
+      </div>
+    </section>
+
+    <section class="left video">
+      <video width="100%" height="auto" controls="controls">
+        <source src="/src/video/bath.mp4" type="video/mp4">
+      </video>
+    </section>
+    
+    <section class="right">
+      <blockquote >
+        <p>Change your life, one bath at a time.</p>
+      </blockquote>
+    </section>
+
+    <section class="right">
+      <div class="main-col yellow">
+        <div class="icon-container">
+          <i class="fa-solid fa-fingerprint"></i>
+        </div>
+        <h4>THE HUMAN TOUCH</h4>
+        <p>
+          We are a team of people with diverse backgrounds and experiences for one simple reason: we've got the best employees. 
+          <br>
+          We value diversity and love getting questions and suggestions about how we can do better.
+        </p>
+      </div>
+    </section>
+
+    <section class="center last"  id="subscription">
+      <div class="main-col yellow">
+        <div class="icon-container">
+          <i class="fa-regular fa-sun"></i>
+        </div>
+        <h4>MAKE EVERY DAY BOMBASTIC</h4>
+        <p>
+          Your bath will never smell so good! Enjoy our monthly subscription box filled with 
+          super fun and colorful bathbombs & soaps.
+          <br>
+          Order before the end of March to receive a free gift with every order. 
+          20% discount on bulk orders!     
+        </p>
+      </div>
+    </section>
+
+
+    <!-- <section class="left">
+      <div class="main-col">
+        <div class="icon-container">
+          <i class="fa-regular fa-heart"></i>
+        </div>
+        <h4>THE LABOUR OF LOVE</h4>
+        <p>
+          Bathbombs are handmade and designed to add a sparkly touch and vibrant fragrance to your day, 
+          and our range is expanding all the time. 
+          <br>
+          We value our customers' wishes and taste and so we're always welcoming suggestions for new products. 
+        </p>
+      </div>
+    </section> -->
+
+    <!-- <section class="left">
+      <div class="main-col">
+        <div class="icon-container">
+          <i class="fa-regular fa-sun"></i>
+        </div>
+        <h4>THE BOMB FOR YOUR BATH</h4>
+        <p>
+          Our most popular seasonal special offer:
+          <br>
+          The adventurous bathbomb. Deluxe orange crush. Made with real food ingredients and ready to boost your skin 
+          and soothe your senses.
+          <br>
+          1. Customer satisfaction guaranteed
+          <br>
+          2. Free shipping on orders over $45
+          <br>
+          3. Priority service
+          <br>
+          4. Family-owned and operated by a diverse team.
+          <br><br> 
+             We're friendly folks and love to talk. Drop us a line at hello@boombath.com if you have any questions, 
+          comments, or other concerns.
+        </p>
+      </div>
+    </section> -->
+
+    
   </div>
+  
 
 
   <!------ Contact Footer ------>
@@ -195,10 +265,6 @@
 
 
 
-
-
-
-
 <script type="module" src="src/index.js"></script>
 
 <script src="/src/navbar-and-footer-components.js"></script>
@@ -207,6 +273,8 @@
 <script src="src/menu.js"></script> 
 
 <script src="src/update-basket.js"></script>
+
+<script src="/src/popup.js"></script>
 
 
 </body>

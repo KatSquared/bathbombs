@@ -64,14 +64,15 @@
 
 <!---------- Purchase confirmation popup ----------->
 
-<div class="purchase-confirmation hidden" id="purchase-confirmation">
-  <i onclick="closePopup()" class="fa-sharp fa-solid fa-xmark"></i>
-  <div class="flex">
-    <h2>Thank you for your purchase!</h2><br>
-    <button class="cta"><a href="index.html">KEEP BROWSING</a></button>
+<div class="popup-container hidden" id="popup">
+  <div class="purchase-confirmation">
+    <i onclick="closePopup()" class="fa-sharp fa-solid fa-xmark"></i>
+    <div class="flex">
+      <h2>Thank you for your purchase!</h2><br>
+      <button class="cta"><a href="index.html">KEEP BROWSING</a></button>
+    </div>
   </div>
 </div>
-
 
 <!------ Contact Footer ------>
 
@@ -87,6 +88,8 @@
 
 <script src="src/product-data.js"></script>
 <script src="src/basket.js"></script>
+
+<script src="/src/popup.js"></script>
 
 
 </body>
