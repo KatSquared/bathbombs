@@ -1,8 +1,6 @@
        
 canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
+  display: none;
 }
 
 :root {
@@ -28,6 +26,28 @@ html, body {
   overflow-x: hidden;
   background-color: #fff;
 } 
+
+.main-background {
+  height: 100vh;
+  width: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url(./img/background-main.png);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 23% 50%;
+}
+
+@media (min-width: 900px) {
+  canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+}
 
 p {
   color: #000;
@@ -94,101 +114,109 @@ i:hover {
 /*-------------- Progress bar ----------------*/
 
 .progress-bar-container{
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  background-color: #fff;
-  z-index: 99;
-}
-.progress-bar {
-  position: absolute;
-  top: 44%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: max-content;
-  z-index: 80;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
+  display: none;
 }
 
-progress {
-  width: 150px;
-  background: transparent;
-  border: 1px solid var(--blue);
-  border-radius: 10px;
-  height: 3px;
-}
-progress::-webkit-progress-bar {
-  width: 150px;
-  border-radius: 10px;
-  height: 3px;
-  background-color: var(--blue);
-}
-progress::-webkit-progress-value {
-  width: 150px;
-  border-radius: 10px;
-  height: 3px;
-  background-color: var(--blue);
-}
-progress::-moz-progress-bar {
-  width: 150px;
-  border-radius: 10px;
-  height: 3px;
-  background-color: var(--blue);
+@media (min-width: 900px) {
+  .progress-bar-container {
+    display: block;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: #fff;
+    z-index: 99;
+  }
+  .progress-bar {
+    position: absolute;
+    top: 44%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+    z-index: 80;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  progress {
+    width: 150px;
+    background: transparent;
+    border: 1px solid var(--blue);
+    border-radius: 10px;
+    height: 3px;
+  }
+  progress::-webkit-progress-bar {
+    width: 150px;
+    border-radius: 10px;
+    height: 3px;
+    background-color: var(--blue);
+  }
+  progress::-webkit-progress-value {
+    width: 150px;
+    border-radius: 10px;
+    height: 3px;
+    background-color: var(--blue);
+  }
+  progress::-moz-progress-bar {
+    width: 150px;
+    border-radius: 10px;
+    height: 3px;
+    background-color: var(--blue);
+  }
+  
+  .background-and-logo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: max-content;
+  }
+  .progress-bar-background {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .progress-bar-background img {
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-name: flat-rotate;
+    animation-direction: reverse;
+  }
+  .progress-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 80px;
+  }
+  .progress-logo-letters {
+    font-size: 12rem;
+    font-family: var(--display);
+  }
+  .progress-logo-desc {
+    margin-bottom: 60px;
+  }
+  
+  .fading {
+    animation-name: fading;
+    animation-iteration-count: 1;
+    animation-delay: 0;
+    animation-timing-function: ease-out;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+    pointer-events: none;
+  }
+  @keyframes fading {
+    0% {opacity: 100%;}
+    100% {opacity: 0%;}
+  }
 }
 
-.background-and-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: max-content;
-}
-.progress-bar-background {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-.progress-bar-background img {
-  animation-iteration-count: infinite;
-  animation-delay: 0s;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-name: flat-rotate;
-  animation-direction: reverse;
-}
-.progress-logo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 80px;
-}
-.progress-logo-letters {
-  font-size: 12rem;
-  font-family: var(--display);
-}
-.progress-logo-desc {
-  margin-bottom: 60px;
-}
-
-.fading {
-  animation-name: fading;
-  animation-iteration-count: 1;
-  animation-delay: 0;
-  animation-timing-function: ease-out;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-  pointer-events: none;
-}
-@keyframes fading {
-  0% {opacity: 100%;}
-  100% {opacity: 0%;}
-}
 
 /*-------------- Main page popup ----------------*/
 
@@ -845,23 +873,29 @@ blockquote .flex {
 /* icon animations */
 .icon-container i {
   font-size: 180px;
-  animation-iteration-count: infinite;
   animation-delay: 0s;
 }
+
+.main-col i {
+  animation-iteration-count: 0;
+}
+.main-col:hover i {
+  animation-iteration-count: infinite;
+}
+.animate i {
+  animation-iteration-count: infinite !important;
+}
+
+
 .star-container {
   margin-left: -2px;
 }
-
 .star, .fa-sun { 
   font-size: 178px !important;
   animation-duration: 10s;
   animation-timing-function: linear;
-}
-
-.main-col:hover .star, .main-col:hover .fa-sun {
   animation-name: flat-rotate;
 }
-
 @keyframes flat-rotate {
   0%   {transform: rotate(0deg);}
   100%  {transform: rotate(360deg);}
@@ -870,48 +904,36 @@ blockquote .flex {
 .fa-circle {
   animation-duration: 3s;
   animation-timing-function: linear;
+  animation-name: pulse;
 }
 .fa-solid.fa-circle {
   font-size: 40px; 
   animation-duration: 2s;
 }
-.main-col:hover .fa-circle {
-  animation-name: pulse;
-}
 
 .fa-heart {
   animation-duration: 2s;
   animation-timing-function: ease-in-out;
-}
-.main-col:hover .fa-heart {
   animation-name: pulse;
 }
+
 @keyframes pulse {
   0%   {transform: scale(105%);}
   50%  {transform: scale(85%);}
   100% {transform: scale(105%);}
 }
 
-.fa-water {
-  animation-name: reflect;
-  animation-duration: 5s;
-}
 
 .fa-face-smile {
   opacity: 100%;
   animation-duration: 5s;
+  animation-name: alternation-smile;
 }
-
 .fa-face-smile-wink {
   opacity: 0%;
   animation-duration: 5s;
   position: relative;
   left: -180px;
-}
-.main-col:hover .fa-face-smile {
-  animation-name: alternation-smile;
-}
-.main-col:hover .fa-face-smile-wink {
   animation-name: alternation-wink;
 }
 @keyframes alternation-smile {
@@ -933,8 +955,6 @@ blockquote .flex {
   animation-duration: 2s;
   opacity: 100%;
   transform-origin: top;
-}
-.main-col:hover .fa-fingerprint {
   animation-name: pressing;
 }
 @keyframes pressing {
@@ -946,8 +966,6 @@ blockquote .flex {
 .fa-water {
   animation-duration: 1.5s;
   font-size: 185px;
-}
-.main-col:hover .fa-water {
   animation-name: squish;
 }
 @keyframes squish {
@@ -1411,6 +1429,30 @@ i.out-of-stock {
 .large-device-intro {
   display: none;
 }
+
+/* image popup */
+
+
+.img-popup div {
+  padding: 0;
+  background-color: transparent;
+  height: auto
+}
+
+.englarged-image img{
+  width: 100%;
+  object-fit: contain;
+  margin-bottom: -4px;
+}
+
+.img-popup i {
+  background-color: rgba(255, 255, 255, 0.35);
+  padding: 4px 8px 3px 8px;
+}
+.img-popup i:hover {
+  color: var(--pink);
+}
+
 
 /* product info */
 
@@ -2313,17 +2355,29 @@ button.blue-btn {
 
 .attributions-container {
   position: absolute; 
-  bottom: 50px; 
-  right: 5%;
+  bottom: 80px; 
+  right: 0;
   background-color: var(--pink);
   padding: 50px;
 }
 
-.attributions-container ul {
-  list-style: none;
+@media (min-width: 610px) {
+  .attributions-container {
+    bottom: 50px;
+  }
 }
 
-
+.attributions-container::after {
+  content: "";
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  margin-left: -20px;
+  border-width: 20px;
+  border-style: solid;
+  border-color: var(--pink) transparent transparent transparent;
+  pointer-events: none;
+}
 
 /* .tooltip {
   position: relative; 
@@ -2354,8 +2408,17 @@ button.blue-btn {
  } */
 
 
+.attributions-container ul {
+  list-style: none;
+}
 
+.attributions-container li {
+  margin-bottom: 20px;
+}
 
+.attributions-container a {
+ text-decoration: underline;
+}
 
 .footer-credit p {
   padding: 4px 10%;

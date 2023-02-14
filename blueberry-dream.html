@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Blueberry Dream - Boombastic Bathbombs</title>
-    <link rel="icon" type="image/svg+xml" href="/public/vite.svg" />
+    <link rel="icon" type="image/png" href="/src/img/logo.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -47,7 +47,7 @@
             <img src="./src/img/bag.png" onclick="changeImage(this)">
           </div>
           <div class="current-image">
-            <img src="./src/img/bathbomb.png" id="currentImage">
+            <img src="./src/img/bathbomb.png" id="currentImage" onclick="openPopup()">
           </div>
         </div>
         <div class="product-info">
@@ -90,14 +90,14 @@
               <p class="item-page-price"><span>10 USD</span>5 USD</p>
               <p>50% off until Friday</p>
               <div class="cart-and-quantity individual-product">
-                <div class="quantity-adjustment-container individual-product ">
-                  <i onclick="decrement(id)" class="fa-solid fa-minus"></i>
+                <div class="quantity-adjustment-container individual-product">
+                  <i onclick="decrement(jsnfnjdngjts)" class="fa-solid fa-minus"></i>
                   <p class="quantity" id="jsnfnjdngjts">
                     1
                   </p>
-                  <i onclick="increment(id)" id="jsnfnjdngjts" class="fa-solid fa-plus"></i>
+                  <i onclick="increment(jsnfnjdngjts)" class="fa-solid fa-plus"></i>
                 </div>
-                  <button onclick="addToBasket(id)" class="add-to-basket">
+                  <button onclick="addToBasket(jsnfnjdngjts)" class="add-to-basket">
                     <i class="fa-solid fa-basket-shopping"></i>
                   </button>
               </div> 
@@ -108,17 +108,11 @@
 
 <!---------- Image preview popup ----------->
 
-<div class="popup-container hidden" id="popup">
-  <div class="main-popup">
+<div class="popup-container img-popup hidden" id="popup">
+  <div>
     <i onclick="closePopup()" class="fa-sharp fa-solid fa-xmark"></i>
-    <div class="flex">
-      <h2>Stay in our bubble</h2><br>
-      <p>From our mailing press to your fingertips - coupons, new arrival announcements, 
-        restocks, special events and more!</p>
-        <form action="" class="flex coupon-form">
-          <input type="email" name="coupon" placeholder="Your e-mail address" size="25">
-          <button type="submit" class="cta">SIGN UP</button>
-        </form>  
+    <div class="englarged-image">
+       <img src="/src/img/bathbomb.png" id="enlarged-image">
     </div>
   </div>
 </div>
@@ -145,8 +139,7 @@
 </div>
 
 
-
-  <!------ Contact Footer ------>
+<!------ Contact Footer ------>
 
 
 <section class="contact-footer" id="footer">
@@ -154,6 +147,7 @@
 
 </main>
 
+<script src="/src/popup.js"></script>
 
 <script src="/src/navbar-and-footer-components.js"></script>
 

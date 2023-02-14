@@ -3,7 +3,6 @@ import './style.css';
 import * as THREE from 'three';
 // import of other basic features (non-essential)
 import {Color} from 'three';
-import {CSS2DRenderer, CSS2DObject} from 'three/examples/jsm/renderers/CSS2DRenderer';
 // pass imports (filters)
 import {RenderPass} from 'three/examples/jsm/postprocessing/RenderPass';
 import {EffectComposer} from 'three/examples/jsm/postprocessing/EffectComposer';
@@ -242,13 +241,6 @@ glbLoader.load('src/models/heart.glb', (gltf) => {
 const heartObj = new THREE.Object3D();
 scene.add(heartObj);
 heartObj.position.set(25,-8, 0);
-/* 
-"heart symbol 3d" (https://skfb.ly/ovwPx) 
-by Victor.Alfonso.Ibarra.Ortega 
-(https://sketchfab.com/Victor.Alfonso.Ibarra.Ortega)
-is licensed under Creative Commons Attribution 
-(http://creativecommons.org/licenses/by/4.0/).
-*/
 
 //
 // SHINING STAR
@@ -264,13 +256,6 @@ glbLoader.load('src/models/star.glb', (gltf) => {
 }, undefined, function (error) {
 	console.error(error);
 });
-/* 
-"Shining star low poly" (https://skfb.ly/owRwI) 
-by magicalcelery 
-(https://sketchfab.com/magicalcelery)
-is licensed under Creative Commons Attribution 
-(http://creativecommons.org/licenses/by/4.0/).
-*/
 
 //
 // MATTE STAR

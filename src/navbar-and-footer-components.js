@@ -140,8 +140,71 @@ let makeFooterComponent = () => {
       
     <div class="attributions-container hidden" id="attributions-container">
       <ul>
-        <li>Star: sifgeig</li>
-        <li>Heart: sfserge</li>
+        <li>
+          <a href="https://skfb.ly/ovwPx">"heart symbol 3d"</a> 
+          by <a href="https://sketchfab.com/Victor.Alfonso.Ibarra.Ortega">
+          Victor.Alfonso.Ibarra.Ortega</a>
+          <br>
+          is licensed under 
+          <a href="http://creativecommons.org/licenses/by/4.0/">
+          Creative Commons Attribution</a>.
+        </li>
+        <li>
+          <a href="https://skfb.ly/owRwI">"Shining star low poly"</a> 
+          by <a href="https://sketchfab.com/magicalcelery">magicalcelery</a> 
+          <br>
+          is licensed under 
+          <a href="http://creativecommons.org/licenses/by/4.0/">
+          Creative Commons Attribution</a>.
+        </li>
+        <li>
+          <a href="https://skfb.ly/6SJEH)">"Chocolate"</a>
+          by <a href="https://sketchfab.com/brainfire">brainfire</a>
+          <br>
+          is licensed under 
+          <a href="http://creativecommons.org/licenses/by/4.0/">
+          Creative Commons Attribution</a>.
+        </li>
+        <li>
+          <a href="https://skfb.ly/6WSyS">"Chocolate Truffle"</a>
+          by <a href="https://sketchfab.com/mreslan">M.Reslan</a>
+          <br>
+          is licensed under 
+          <a href="http://creativecommons.org/licenses/by/4.0/">
+          Creative Commons Attribution</a>.
+        </li>
+        <li>
+          <a href="https://skfb.ly/6UUJP">"Cupcake"</a>
+          by <a href="https://sketchfab.com/greta.m">greta.m</a>
+          <br>
+          is licensed under 
+          <a href="http://creativecommons.org/licenses/by/4.0/">
+          Creative Commons Attribution</a>.
+        </li>
+        <li>
+          <a href="https://skfb.ly/orOsW">"Soap"</a> 
+          by <a href="https://sketchfab.com/George52">theSussyGuy</a>
+          <br>
+          is licensed under 
+          <a href="http://creativecommons.org/licenses/by/4.0/">
+          Creative Commons Attribution</a>.
+        </li>
+        <li>
+          <a href="https://skfb.ly/6VyGB">"Cinnabon"</a> 
+          by <a href="https://sketchfab.com/Cinnabon">Cinnabon</a>
+          <br>
+          is licensed under 
+          <a href="http://creativecommons.org/licenses/by/4.0/">
+          Creative Commons Attribution</a>.
+        </li>
+        <li>
+          <a href="https://skfb.ly/6SSGq">"Neon Ice Cream"</a> 
+          by <a href="https://sketchfab.com/sweet.p">ar ꕤ</a>
+          <br>
+          is licensed under 
+          <a href="http://creativecommons.org/licenses/by/4.0/">
+          Creative Commons Attribution</a>.
+        </li>
       </ul>
     </div>
 

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <title>Boombastic Bathbombs</title>
-    <link rel="icon" type="image/svg+xml" href="/public/vite.svg"/>
+    <link rel="icon" type="image/png" href="/src/img/logo.png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,6 +15,8 @@
   <body>
 
 <!---------- Canvas with Three.js ----------->  
+
+<div class="main-background"></div>
 
 <canvas id="background"></canvas>  
 
@@ -206,50 +208,6 @@
         </p>
       </div>
     </section>
-
-
-    <!-- <section class="left">
-      <div class="main-col">
-        <div class="icon-container">
-          <i class="fa-regular fa-heart"></i>
-        </div>
-        <h4>THE LABOUR OF LOVE</h4>
-        <p>
-          Bathbombs are handmade and designed to add a sparkly touch and vibrant fragrance to your day, 
-          and our range is expanding all the time. 
-          <br>
-          We value our customers' wishes and taste and so we're always welcoming suggestions for new products. 
-        </p>
-      </div>
-    </section> -->
-
-    <!-- <section class="left">
-      <div class="main-col">
-        <div class="icon-container">
-          <i class="fa-regular fa-sun"></i>
-        </div>
-        <h4>THE BOMB FOR YOUR BATH</h4>
-        <p>
-          Our most popular seasonal special offer:
-          <br>
-          The adventurous bathbomb. Deluxe orange crush. Made with real food ingredients and ready to boost your skin 
-          and soothe your senses.
-          <br>
-          1. Customer satisfaction guaranteed
-          <br>
-          2. Free shipping on orders over $45
-          <br>
-          3. Priority service
-          <br>
-          4. Family-owned and operated by a diverse team.
-          <br><br> 
-             We're friendly folks and love to talk. Drop us a line at hello@boombath.com if you have any questions, 
-          comments, or other concerns.
-        </p>
-      </div>
-    </section> -->
-
-    
   </div>
   
 
@@ -263,11 +221,18 @@
 
 </main>
 
-
+<script>
+  const progressContainer = document.getElementById('progress-container');
+  setTimeout(() => {
+    progressContainer.classList.add('fading');
+  }, 5000);
+</script>
 
 <script type="module" src="src/index.js"></script>
 
 <script src="/src/navbar-and-footer-components.js"></script>
+
+<script src="/src/scroll-animations.js"></script>
 
 <!----JavaScript for toggle menu---->
 <script src="src/menu.js"></script> 

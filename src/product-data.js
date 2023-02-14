@@ -287,21 +287,6 @@ let shopItemsData = [
           }
     },
     {
-        id: 'wrvw346wvyw4',
-        img: './src/img/bathbomb12.png',
-        name: 'REFRESHING WAVE',
-        weight: 10,
-        price: 12,
-        discount: 0,
-        category: 'SOAP',
-        stock: 99,
-        popularity: 14,
-        tags: {
-          shape: 'star-n-heart',
-          smell: 'refreshing'
-          }
-    },
-    {
         id: 'ewrvwt35y',
         img: './src/img/soap1.png',
         name: 'GRAPE SODA',
