@@ -2,7 +2,6 @@
 // SCROLL-INTO-VIEW ANIMATIONS FOR MOBILE
 //
 const viewportWidth = window.innerWidth
-console.log(viewportWidth)
 
 if (viewportWidth < 900) {
     const observer = new IntersectionObserver((entries) => {

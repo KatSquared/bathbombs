@@ -1,11 +1,11 @@
 const popup = document.getElementById('popup');
 
 function openPopup() {
+  popup.classList.remove('hidden');
   if (currentImg) {
     let enlargedImg = document.getElementById('enlarged-image');
     enlargedImg.src = currentImg.src;
-  }
-  popup.classList.remove('hidden');
+  } else return
 }
 
 function closePopup() {
