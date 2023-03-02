@@ -2379,35 +2379,6 @@ button.blue-btn {
   pointer-events: none;
 }
 
-/* .tooltip {
-  position: relative; 
- }
- 
- .tooltip-text {
-   position: absolute;
-   display: none;
-   transform: translateX(-42.75%);
-   text-align: center;
-   width: 200px;
-   top: 31px;
-   background-color: #ccc;
-   padding: 10px;
-   border-radius: 20px;
- }
- 
- .tooltip-text::before {
-   content: "";
-   position: absolute;
-   top: -20px;
-   left: 50%;
-   margin-left: -10px;
-   border-width: 10px;
-   border-style: solid;
-   border-color: transparent transparent #ccc transparent;
-   pointer-events: none;
- } */
-
-
 .attributions-container ul {
   list-style: none;
 }
