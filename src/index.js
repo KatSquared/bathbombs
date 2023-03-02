@@ -394,7 +394,6 @@ const footer = document.getElementById('footer');
 
 const domElements = [];
 domElements.push(...sections, ...sectionsContent, ...blockquotes, shorthandNavbar, sectionsNavbar, footer);
-console.log(domElements)
 
 let isDomElement = false;
 
