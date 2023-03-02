@@ -249,16 +249,15 @@
   if (popup.children[0].classList.contains('main-popup')) 
       openPopup();
 
-  // MENU SIDEBAR
-  let menuLinks = undefined;
-  
+  // MENU SIDEBAR  
   function showMenu() {
-      menuLinks = document.getElementById("menuLinks");
+      const menuLinks = document.getElementById("menuLinks");
       menuLinks.style.right = "0";
   }
 
   function hideMenu() {
-      menuLinks.style.right = "-400px";
+    const menuLinks = document.getElementById("menuLinks");
+    menuLinks.style.right = "-400px";
   }
 </script>
 
