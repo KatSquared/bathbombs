@@ -412,20 +412,6 @@ window.addEventListener('mousemove', (e) => {
 });
 const rayCaster = new THREE.Raycaster();
 
-// Event listener for click
-const mousePositionOnClick = new THREE.Vector2();
-window.addEventListener('click', (e) => {
-    mousePositionOnClick.x = (e.clientX / window.innerWidth) * 2 - 1;
-    mousePositionOnClick.y = - (e.clientY / window.innerHeight) * 2 + 1;
-    if (domElements.includes(e.target)) {
-        isDomElement = false;
-        return;
-    }
-    isDomElement = true;
-})
-const clickRayCaster = new THREE.Raycaster();
-
-
 
 //
 // ON SCROLL ANIMATIONS
@@ -456,11 +442,6 @@ moveCamera();
 let step = 0;
 const speed = 0.01;
 const clock = new THREE.Clock();
-let isLinkOneOpened = false;
-let isLinkTwoOpened = false;
-let isLinkThreeOpened = false;
-let isLinkFourOpened = false;
-let isLinkFiveOpened = false;
 
 // recursive function calls render method automatically when browser repaints the screen
 function animate(time) {
@@ -513,79 +494,10 @@ function animate(time) {
                 heartModel.rotation.z = time / 1000;
                 labelFiveMesh.material.opacity = 1;
             }
-            // labels
-            else if (intersects[i].object.id == labelOneMesh.id) {
-                labelOneMesh.position.z += Math.sin(step * 30) * 0.02;
-            }
-            else if (intersects[i].object.id == labelTwoMesh.id) {
-                labelTwoMesh.position.z += Math.sin(step * 30) * 0.02;
-            }
-            else if (intersects[i].object.id == labelThreeMesh.id) {
-                labelThreeMesh.position.z += Math.sin(step * 30) * 0.02;
-            }
-            else if (intersects[i].object.id == labelFourMesh.id) {
-                labelFourMesh.position.z += Math.sin(step * 30) * 0.02;
-            }
-            else if (intersects[i].object.id == labelFiveMesh.id) {
-                labelFiveMesh.position.z += Math.sin(step * 30) * 0.02;
-            }
         }
     }
     
     composer.render();
-
-    // clicking at labels would redirect to product pages - however, for the sake of 
-    // simplicity of this portfolio project, it redirects to other already existing subpages
-        clickRayCaster.setFromCamera(mousePositionOnClick, camera);
-        let clickIntersects = clickRayCaster.intersectObjects(scene.children);
-        
-        for (let i = 0; i < clickIntersects.length; i++){
-            // early return when it is a dom element that's on top 
-            // -> preventing accidental link opening
-            if (isDomElement) return;
-
-            else if (clickIntersects[i].object.id === labelOneMesh.id && labelOneMesh.material.opacity === 1) {
-                if (!isLinkOneOpened) {
-                    window.open('blueberry-dream.html');
-                    isLinkOneOpened = true;
-                    isLinkTwoOpened = isLinkThreeOpened = isLinkFourOpened = isLinkFiveOpened = false;
-                }
-                else return;
-            }
-            else if (clickIntersects[i].object.id === labelTwoMesh.id && labelTwoMesh.material.opacity === 1) {
-                if (!isLinkTwoOpened) {
-                    window.open('special-offer.html');
-                    isLinkTwoOpened = true;
-                    isLinkOneOpened = isLinkThreeOpened = isLinkFourOpened = isLinkFiveOpened = false;
-                }
-                else return;     
-            } 
-            else if (clickIntersects[i].object.id === labelThreeMesh.id && labelThreeMesh.material.opacity === 1) {
-                if (!isLinkThreeOpened) {
-                    window.open('bathbombs.html');
-                    isLinkThreeOpened = true;
-                    isLinkOneOpened = isLinkTwoOpened = isLinkFourOpened = isLinkFiveOpened = false;
-                }
-                else return;     
-            } 
-            else if (clickIntersects[i].object.id === labelFourMesh.id && labelFourMesh.material.opacity === 1) {
-                if (!isLinkFourOpened) {
-                    window.open('soaps.html');
-                    isLinkFourOpened = true;
-                    isLinkOneOpened = isLinkTwoOpened = isLinkThreeOpened = isLinkFiveOpened = false;
-                }
-                else return;     
-            } 
-            else if (clickIntersects[i].object.id === labelFiveMesh.id && labelFiveMesh.material.opacity === 1) {
-                if (!isLinkFiveOpened) {
-                    window.open('basket.html');
-                    isLinkFiveOpened = true;
-                    isLinkOneOpened = isLinkTwoOpened = isLinkThreeOpened = isLinkFourOpened = false;
-                }
-                else return;     
-            } 
-        }
-    
 }
 
 animate();
