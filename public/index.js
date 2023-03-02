@@ -3691,7 +3691,7 @@ void main() {
         <div class="shorthand-menu__label">
             <i class="fa-solid fa-magnifying-glass"></i>
             <i class="fa-solid fa-user"></i>
-            <a href=basket.html class="cart-icon-and-amount">
+            <a href="basket.html" class="cart-icon-and-amount">
               <i class="fa-solid fa-basket-shopping"></i>
               <p id="cartAmount">0</p>
             </a>
