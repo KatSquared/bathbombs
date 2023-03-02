@@ -111,7 +111,7 @@ let makeSpecialOfferComponent = () => {
                     <div class="discount-label">
                     <p>-50%</p>
                     </div>
-                    <img src="/src/img/bathbomb16.png" alt="bathbombs sidebar image">    
+                    <img src="./src/img/bathbomb16.png" alt="bathbombs sidebar image">    
                 </div>
 
                 <!--normal slides-->
@@ -119,21 +119,21 @@ let makeSpecialOfferComponent = () => {
                     <div class="discount-label">
                     <p>-40%</p>
                     </div>
-                    <img src="/src/img/bathbomb9.png" alt="bathbombs sidebar image">        
+                    <img src="./src/img/bathbomb9.png" alt="bathbombs sidebar image">        
                 </div>
             
                 <div class="special-item">
                     <div class="discount-label">
                     <p>-30%</p>
                     </div>
-                    <img src="/src/img/bathbomb6.png" alt="bathbombs sidebar image">         
+                    <img src="./src/img/bathbomb6.png" alt="bathbombs sidebar image">         
                 </div>
             
                 <div class="special-item">
                     <div class="discount-label">
                     <p>-50%</p>
                     </div>
-                    <img src="/src/img/bathbomb16.png" alt="bathbombs sidebar image">        
+                    <img src="./src/img/bathbomb16.png" alt="bathbombs sidebar image">        
                 </div>
 
                 <!--COPY OF FIRST SLIDE-->
@@ -141,7 +141,7 @@ let makeSpecialOfferComponent = () => {
                     <div class="discount-label">
                     <p>-40%</p>
                     </div>
-                    <img src="/src/img/bathbomb9.png" alt="bathbombs sidebar image">        
+                    <img src="./src/img/bathbomb9.png" alt="bathbombs sidebar image">        
                 </div>
                 </div>
             </div>
