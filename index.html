@@ -248,6 +248,17 @@
 
   if (popup.children[0].classList.contains('main-popup')) 
       openPopup();
+
+  // MENU SIDEBAR
+  const menuLinks = document.getElementById("menuLinks");
+
+  function showMenu() {
+      menuLinks.style.right = "0";
+  }
+
+  function hideMenu() {
+      menuLinks.style.right = "-400px";
+  }
 </script>
 
 </body>
