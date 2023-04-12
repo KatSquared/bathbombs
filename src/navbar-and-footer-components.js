@@ -205,6 +205,10 @@ let makeFooterComponent = () => {
           <a href="http://creativecommons.org/licenses/by/4.0/">
           Creative Commons Attribution</a>.
         </li>
+        <li>
+        All models have been edited by changing material 
+        <br>properties and replacing textures.
+        </li>
       </ul>
     </div>
 
