@@ -42,6 +42,7 @@ html, body, main {
   background-size: cover;
   background-position: 23% 50%;
   overflow: hidden;
+  z-index: -1;
 }
 
 @media (min-width: 900px) {
