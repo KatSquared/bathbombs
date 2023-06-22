@@ -746,8 +746,8 @@ header h3 {
 }
 
 .main-col {
+  padding: 10%;
   max-width: 650px;
-  padding: 4rem;
   background: var(--blue);
   font-size: 1.25rem;
   line-height: 1.5;
@@ -757,7 +757,7 @@ header h3 {
   box-sizing: border-box;
 }
 .main-col:hover {
-  border-radius: 100px;
+  border-radius: 50px;
   transition: all 250ms ease-out;
   background-color: var(--pink);
 }
@@ -868,6 +868,12 @@ blockquote .flex {
   }
   .last {
     padding-bottom: 150px;
+  }
+  .main-col:hover {
+    border-radius: 100px;
+  }
+  .main-col {
+    padding: 4rem;
   }
 }
 
