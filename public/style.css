@@ -22,9 +22,12 @@ canvas {
 }
 
 html, body {
+  background-color: #fff;
+}
+
+html, body, main {
   width: 100%; 
   overflow-x: hidden;
-  background-color: #fff;
 } 
 
 .main-background {
@@ -280,9 +283,6 @@ i:hover {
 }
 
 .main-popup {
-  box-shadow: #555 0px 0px 20px !important;
-  margin-left: -1px;
-  margin-right: -1px;
   max-width: 100vw 100%;
 }
 .main-popup p {
@@ -314,6 +314,9 @@ i:hover {
   .main-popup p {
     margin-top: 20px;
   }
+  .main-popup {
+    box-shadow: #555 0px 0px 20px !important;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -337,6 +340,9 @@ i:hover {
   }
   .main-popup p {
     margin-top: 20px;
+  }
+  .main-popup {
+    box-shadow: #555 0px 0px 20px !important;
   }
 }
 
