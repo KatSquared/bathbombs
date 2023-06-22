@@ -232,11 +232,17 @@ i:hover {
 
 .popup-container > * {
   background-color: var(--blue);
-  padding: 5% 5%;
   box-shadow: #999 0px 0px 10px;
   width: 100% !important;
   box-sizing: border-box;
   max-width: 600px !important;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 120px 5%;
+  width: 90%;
+  max-width: 850px;
 }
 
 .popup-container .flex {
@@ -253,8 +259,8 @@ i:hover {
   color: #000;
   font-size: 1.8rem;
   position: absolute;
-  top: 28px;
-  right: 44px;
+  top: 2.5%;
+  right: 5%;
 }
 .popup-container i:hover {
   color: #fff;
@@ -298,6 +304,10 @@ i:hover {
   .popup-container button {
     margin-top: 40px;
   }
+  .popup-container i {
+    top: 28px;
+    right: 44px;
+  }
 }
 
 @media (min-width: 1600px) {
@@ -313,6 +323,10 @@ i:hover {
   }
   .popup-container button {
     margin-top: 40px;
+  }
+  .popup-container i {
+    top: 28px;
+    right: 44px;
   }
 }
 
@@ -2200,19 +2214,6 @@ button.blue-btn {
 
 .checkout .cta:hover i {
   color: #000;
-}
-
-.popup-container > * {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: var(--blue);
-  padding: 120px 5%;
-  box-shadow: #999 0px 0px 10px;
-  width: 90%;
-  box-sizing: border-box;
-  max-width: 850px;
 }
 
 @media (min-width: 1600px) {
