@@ -38,6 +38,7 @@ html, body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: 23% 50%;
+  overflow: hidden;
 }
 
 @media (min-width: 900px) {
