@@ -31,7 +31,7 @@ html, body, main {
 } 
 
 .main-background {
-  height: 100%;
+  height: 110%;
   width: 100%;
   position: fixed;
   top: 0;
@@ -51,6 +51,9 @@ html, body, main {
     position: fixed;
     top: 0;
     left: 0;
+  }
+  .main-background{
+    display: none;
   }
 }
 
