@@ -2197,7 +2197,7 @@ button.blue-btn {
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: var(--blue);
-  padding: 150px 60px;
+  padding: 120px 5%;
   box-shadow: #999 0px 0px 10px;
   width: 90%;
   box-sizing: border-box;
