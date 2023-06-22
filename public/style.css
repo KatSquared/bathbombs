@@ -28,8 +28,8 @@ html, body {
 } 
 
 .main-background {
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
@@ -505,7 +505,7 @@ h1.menu-logo {
   }
   .menu-links-sections > * {
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 0px;
   }
   .sections-links::after { 
     content: '';
@@ -513,12 +513,16 @@ h1.menu-logo {
     margin-left: 20%;
     height: 3px;
     display: block;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-bottom: #000 double 3px;
   }
   .menu-links a {
     font-size: 1.5rem;
+    padding: 0;
+  }
+  .menu-links ul li {
+    padding: 0;
   }
 }
 
@@ -640,17 +644,18 @@ header h3 {
 
 @media (max-width: 580px) {
   header h1 {
-    font-size: 3.1rem;
-    line-height: 55px;
-    margin-top: 10px;
-    text-align: center;
+    font-size: 2.9rem;
+    line-height: 3rem;
+    margin-top: 0;
    }
-   
    header h3 {
-     margin-top: 60px;
-     font-size: 1.4rem;
-     line-height: 33px;
+     margin-top: 40px;
+     font-size: 1.2rem;
+     line-height: 1.6rem;
      margin-bottom: 30px;
+   }
+   .header-text {
+    padding: 10%;
    }
 
    .first {

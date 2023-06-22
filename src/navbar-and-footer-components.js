@@ -66,11 +66,11 @@ let makeShorthandComponent = () => {
                   <a href="soaps.html">SOAPS & ACCESORIES</a>
                 </div>
               </div>
-              <li onclick="scrollToCompany()"><a href="#company">COMPANY</a></li>
-              <li onclick="scrollToProducts()"><a href="#products">PRODUCTS</a></li>
-              <li onclick="scrollToMission()"><a href="#mission">OUR MISSION</a></li>
-              <li onclick="scrollToSubscription()"><a href="#subscription">SUBSCRIPTION</a></li>
-              <li onclick="scrollToContact()"><a href="#footer">CONTACT</a></li>
+              <li onclick="scrollToCompany()" onclick="hideMenu()"><a href="#company">COMPANY</a></li>
+              <li onclick="scrollToProducts()" onclick="hideMenu()"><a href="#products">PRODUCTS</a></li>
+              <li onclick="scrollToMission()" onclick="hideMenu()"><a href="#mission">OUR MISSION</a></li>
+              <li onclick="scrollToSubscription()" onclick="hideMenu()"><a href="#subscription">SUBSCRIPTION</a></li>
+              <li onclick="scrollToContact()" onclick="hideMenu()"><a href="#footer">CONTACT</a></li>
             </ul>
             <h1 class="menu-logo">:BB:</h1>
         </div>
