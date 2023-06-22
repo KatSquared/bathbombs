@@ -225,14 +225,14 @@ i:hover {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
-  width: 100vw;
+  height: 70%;
+  width: 100%;
   z-index: 70;
 }
 
 .popup-container > * {
   background-color: var(--blue);
-  padding: 150px 60px;
+  padding: 5% 5%;
   box-shadow: #999 0px 0px 10px;
   width: 100% !important;
   box-sizing: border-box;
@@ -261,7 +261,7 @@ i:hover {
 }
 
 .popup-container h2 {
-  line-height: normal;
+  line-height: 10px !important;
 }
 .purchase-confirmation h2 {
   font-size: 2rem;
