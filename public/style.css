@@ -118,6 +118,15 @@ i:hover {
   display: none;
 }
 
+@media screen and (max-width: 800px) {
+  p {
+    font-size: 0.8rem;
+    line-height: 1rem;
+  }
+  button {
+    font-size: 1rem !important;
+  }
+}
 
 /*-------------- Progress bar ----------------*/
 
@@ -419,6 +428,12 @@ i:hover {
   margin-top: 4px;
 }
 
+@media screen and (max-width: 700px) {
+  .logo-desc {
+    opacity: 0;
+  }
+}
+
 .shorthand-menu {
   position: fixed;
   top: 0;
@@ -691,7 +706,10 @@ header h3 {
    .header-text {
     padding: 10%;
    }
-
+   .header-text h1 {
+    font-size: 2.6rem;
+    line-height: 2.8rem;
+   }
    .first {
     display: none;
    }
@@ -780,7 +798,7 @@ header h3 {
 }
 
 .main-col {
-  padding: 10%;
+  padding: 15%;
   max-width: 650px;
   background: var(--blue);
   font-size: 1.25rem;
@@ -1038,26 +1056,10 @@ blockquote .flex {
   background-color: transparent;
 }
 
-@media (max-width: 660px) {
-  .products-sidebar {
-    margin-top: 100px;
-  }
-}
-
-
-@media (min-width: 900px){
-  .products-sidebar {
-    width: 20%;
-    max-width: 330px;
-    position: fixed;
-    height: 100%;
-  }
-}
-
 
 
 .breadcrumbs i {
-  font-size: 0.8rem;
+  font-size: 0.6rem;
 }
 
 .breadcrumbs i:hover {
@@ -1158,6 +1160,28 @@ button.carousel-button {
 
 
 
+@media (max-width: 660px) {
+  .products-sidebar {
+    margin-top: 100px;
+  }
+}
+
+
+@media (min-width: 900px){
+  .products-sidebar {
+    width: 20%;
+    max-width: 330px;
+    position: fixed;
+    height: 100%;
+  }
+  .breadcrumbs i {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
 /* filters */
 
 section.filters {
@@ -1191,6 +1215,11 @@ section.filters {
 .category-dropdown > *, .sort-by-filter > *, .breadcrumbs p {
   font-size: 1rem;
   cursor: pointer;
+}
+
+.breadcrumbs p {
+  font-size: 0.7rem;
+  line-height: 0.8rem;
 }
 
 .dropdown-btn  {
@@ -1307,6 +1336,9 @@ section.filters {
   }
   .filters-container {
     padding-top: 180px;
+  }
+  .breadcrumbs p {
+    font-size: 1rem;
   }
 }
 
@@ -1509,6 +1541,7 @@ i.out-of-stock {
 
 .small-device-intro h2 {
   margin-bottom: -7px;
+  line-height: 2.4rem;
 }
 
 .small-device-intro h3 {
@@ -1583,9 +1616,9 @@ i.out-of-stock {
 .tooltip-text {
   position: absolute;
   display: none;
-  transform: translateX(-42.75%);
+  transform: translateX(-30.5%);
   text-align: center;
-  width: 200px;
+  width: 60px;
   top: 31px;
   background-color: #ccc;
   padding: 10px;
@@ -1595,7 +1628,7 @@ i.out-of-stock {
 .tooltip-text::before {
   content: "";
   position: absolute;
-  top: -20px;
+  top: -19px;
   left: 50%;
   margin-left: -10px;
   border-width: 10px;
@@ -1848,6 +1881,12 @@ button.blue-btn {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .grey-btn {
+    font-size: 0.8rem !important;
+  }
+}
+
 /* suggestions */
 
 .suggestions-title {
@@ -1857,6 +1896,7 @@ button.blue-btn {
   font-size: 2rem;
   font-family: var(--serif);
   text-align: center;
+  line-height: 2.4rem;
 }
 
 .suggestions-title::after {
@@ -2012,21 +2052,28 @@ button.blue-btn {
   position: absolute;
 }
 
-@media (max-width: 700px) {
-  .shipping-qualify {
-    margin-bottom: 50px;
-  }
-}
+
 
 .message h2 {
   text-align: center;
   margin-bottom: 40px;
+  line-height: 3rem;
 }
 
 .message .cta {
   margin-bottom: 150px;
 }
 
+@media (max-width: 700px) {
+  .shipping-qualify {
+    margin-bottom: 50px;
+  }
+  .message h2 {
+    font-size: 2rem;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+}
 
 .column-labels > * {
   font-family: var(--serif);
@@ -2097,6 +2144,13 @@ button.blue-btn {
 .cart-buttons {
   width: 80px;
   padding: 15px 20px;
+}
+
+@media screen and (max-width: 700px) { 
+  .cart-buttons {
+    padding: 15px 0;
+  }
+  
 }
 
 .img-label {
@@ -2174,7 +2228,6 @@ button.blue-btn {
   flex-direction: column;
   flex-basis: 35%;
   min-width: 320px;
-  max-width: 600px;
   margin-top: 40px;
   background-color: var(--blue);
   height: max-content;
@@ -2182,7 +2235,11 @@ button.blue-btn {
 }
 
 .order-summary-container > * {
-  margin: 0 40px;
+  margin: 0 30px;
+}
+
+.order-summary-container h2 {
+  line-height: 2.5rem;
 }
 
 .desc-main .flex {
@@ -2194,7 +2251,7 @@ button.blue-btn {
   margin-bottom: 30px;
 }
 .desc-main > div {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .discount {
@@ -2252,6 +2309,12 @@ button.blue-btn {
   .order-summary-container {
     margin-top: 60px;
   }
+  .order-summary-container > * {
+    margin: 0 40px;
+  }
+  .desc-main > div {
+    margin-bottom: 40px;
+  }
 }
 
 @media (min-width: 1250px) and (max-width: 1599px) {
@@ -2264,6 +2327,19 @@ button.blue-btn {
   .order-summary-container {
     margin-top: 60px;
   }
+  .order-summary-container > * {
+    margin: 0 40px;
+  }
+  .desc-main > div {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container.basket-container {
+    width: 90% !important;
+  }
+  
 }
 
 /*!-------- Contact Footer ----------*/
@@ -2450,7 +2526,7 @@ button.blue-btn {
   width: 100%;
   overflow: hidden;
   line-height: 0;
-  transform: rotate(180deg);
+  transform: rotate(180deg) translateY(-1px);
 }
 
 .wave svg {
