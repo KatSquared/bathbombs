@@ -490,7 +490,7 @@ function animate(time) {
                 intersects[i].object.rotation.z = time / 1000;
                 labelFourMesh.material.opacity = 1;
             }
-            else if (intersects[i].object.id === 92) {
+            else if (intersects[i].object.id === 92 || intersects[i].object.id === 94) {
                 heartModel.rotation.z = time / 1000;
                 labelFiveMesh.material.opacity = 1;
             }
