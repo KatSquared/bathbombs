@@ -1116,7 +1116,7 @@ blockquote .flex {
 button.carousel-button {
   background-color: transparent;
   padding: 0px;
-  z-index: 1;
+  z-index: 1; 
   cursor: default;
 }
 
