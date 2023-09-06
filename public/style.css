@@ -1917,7 +1917,7 @@ button.blue-btn {
 }
 
 .slider {
-  clip-path: fill-box;
+  clip-path: polygon(0% 0%,100% 0%,100% 100%,0% 100%);
   width: 80%;
 }
 
