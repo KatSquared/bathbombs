@@ -558,8 +558,8 @@ h1.menu-logo {
   }
   .sections-links::after { 
     content: '';
-    width: 80%;
-    margin-left: 20%;
+    width: 70%;
+    margin-left: 30%;
     height: 3px;
     display: block;
     margin-top: 10px;
@@ -567,7 +567,7 @@ h1.menu-logo {
     border-bottom: #000 double 3px;
   }
   .menu-links a {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     padding: 0;
   }
   .menu-links ul li {
@@ -1299,6 +1299,15 @@ section.filters {
   background-color: var(--pink);
 }
 
+@media screen and (max-width: 600px) {
+  .category-filters-container {
+    gap: 10px;
+  }
+  .dropdown-content i {
+    padding: 10px 20px 10px 40px;
+  }
+}
+
 /* products */
 
 .items-container {
@@ -1444,6 +1453,16 @@ section.filters {
 i.out-of-stock {
   background-color: #ddd;
 }
+
+@media screen and (max-width: 600px) {
+  .items-container {
+    margin: 40px 40px 0px 40px;
+  }
+  .item-image {
+    margin-bottom: 0px;
+  }
+}
+
 
 
 /*!-------- Individual Item Page ----------*/
