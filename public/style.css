@@ -2233,7 +2233,7 @@ button.blue-btn {
   display: flex;
   flex-direction: column;
   flex-basis: 35%;
-  min-width: 320px;
+  min-width: 270px;
   margin-top: 40px;
   background-color: var(--blue);
   height: max-content;
@@ -2258,6 +2258,11 @@ button.blue-btn {
 }
 .desc-main > div {
   margin-bottom: 20px;
+  justify-content: space-between;
+}
+
+.desc-main > div *:nth-of-type(2) {
+  text-align: right;
 }
 
 .discount {
@@ -2345,7 +2350,10 @@ button.blue-btn {
   .container.basket-container {
     width: 90% !important;
   }
-  
+  .order-summary-container {
+    margin-left: -10%;
+    margin-right: -10%;
+  }
 }
 
 /*!-------- Contact Footer ----------*/
