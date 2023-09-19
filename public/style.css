@@ -2152,13 +2152,6 @@ button.blue-btn {
   padding: 15px 20px;
 }
 
-@media screen and (max-width: 700px) { 
-  .cart-buttons {
-    padding: 15px 0;
-  }
-  
-}
-
 .img-label {
   width: 100px;
   text-align: center;
@@ -2212,10 +2205,10 @@ button.blue-btn {
 }
 
 .fa-xmark {
+  grid-column: 12/12;
   padding: 15px 0px;
   margin-left: -10px;
   height: max-content;
-  grid-column: 12/12;
   color: #999;
 }
 
@@ -2224,6 +2217,39 @@ button.blue-btn {
   position: relative;
   pointer-events: none;
   opacity: 0.6;
+}
+
+@media screen and (max-width: 700px) { 
+  .basket-grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    column-gap: 0px;
+  }
+  .cart-buttons {
+    padding: 15px 0;
+  }
+  .name-and-category, .name-label {
+    display: none;
+  }
+  .quantity-label, .cart-buttons {
+    grid-column: 2/7;
+    text-align: center;
+  }
+  .price-label, .product-total {
+    grid-column: 8/10;
+  }
+  .cart-img, .img-label {
+    grid-column: 1/2;
+    margin-left: -20px;
+  }
+  .cart-img {
+    transform: scale(65%);
+  }
+  .fa-xmark {
+    grid-column: 12/12;
+    padding: 15px 0px;
+    margin-left: -20px;
+  }
 }
 
 
