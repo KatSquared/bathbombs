@@ -2032,6 +2032,15 @@ button.blue-btn {
   }
 }
 
+@media  screen and (max-width: 600px) {
+  .suggestions-container {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+    gap: 0px;
+  }
+}
+
 /*!-------- Basket ----------*/
 
 .basket-shorthand {
