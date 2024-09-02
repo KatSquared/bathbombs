@@ -3845,7 +3845,7 @@ void main() {
 
     <div class="footer-credit">
       <p>Design & implementation: 
-        <span style="text-decoration: underline;">Katarzyna Kmita</span>
+        <span style="text-decoration: underline;">Architekt Stron</span>
         <span>| 3D model attributions</span>
         <i class="fa-solid fa-angle-up" id="attributions-caret" onclick="showAttributions()"></i>
       </p>
