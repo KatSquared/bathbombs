@@ -214,7 +214,7 @@ let makeFooterComponent = () => {
 
     <div class="footer-credit">
       <p>Design & implementation: 
-        <span style="text-decoration: underline;"><a href="https://www.katarzyna-kmita.com/" target="blank">Katarzyna Kmita<a/></span>
+        <span style="text-decoration: underline;"><a href="https://architekt-stron.com/" target="blank">Architekt Stron<a/></span>
         <span>| 3D model attributions</span>
         <i class="fa-solid fa-angle-up" id="attributions-caret" onclick="showAttributions()"></i>
       </p>
